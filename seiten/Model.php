@@ -95,7 +95,6 @@ class Model {
         $gebur = mktime(0, 0, 0, $mon, $tag, $jah);
         return intval(($jetzt - $gebur) / (3600 * 24 * 365));
     }
-
 }
 
 ?>
