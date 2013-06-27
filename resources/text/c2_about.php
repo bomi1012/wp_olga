@@ -1,7 +1,7 @@
 <div class="article_text">
     <br>
     <!-- http://fancyapps.com/fancybox/ -->
-    <a title="Ich bin <?echo Constans::KW_NAME?>" class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_1b.jpg">
+    <a title="Ich bin <?php echo Constans::KW_NAME ?>" class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_1b.jpg">
         <img class="curved" src="<?php echo Constans::IMAGE_PATCH ?>tm_photo_1a.jpg" alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>"></a>
 
     <a title="Ich und meine Kinder (Gabriel und Evelin)" class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_2b.jpg">

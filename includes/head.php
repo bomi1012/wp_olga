@@ -66,9 +66,9 @@ $(document).ready(function() {
 		width		: '70%',
 		height		: '70%',
 		autoSize	: false,
-		closeClick	: false,
+		closeClick	: true,
 		openEffect	: 'none',
-		closeEffect	: 'none'
+		//closeEffect	: 'none'
 	});
 });
 </script>

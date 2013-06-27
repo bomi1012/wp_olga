@@ -98,6 +98,7 @@ Ersetzen Sie das Zeichen ß durch die Zeichenfolge &szlig;
     const TEXT_CENTER_2 = "ganz nach den individuellen Bed&uuml;rfnissen Ihres Kindes.";
     
     const IMAGE_PATCH = "resources/images/";
+    const ALBUM_PATCH = "resources/albums/";
     const ICON_PATCH = "resources/icons/";
     const TEXT_PATCH = "resources/text/";
     const PDF_PATCH = "resources/pdf/";
