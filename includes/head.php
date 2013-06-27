@@ -13,7 +13,9 @@
 <link rel="stylesheet" href="resources/css/layout.css" type="text/css" media="all">
 <link rel="stylesheet" href="resources/css/style.css" type="text/css" media="all">
 <link rel="stylesheet" href="resources/css/bootstrap.css" type="text/css" media="all">
+<!--
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+-->
 <link rel="stylesheet" href="resources/css/font-awesome.css" type="text/css" media="all">
 <link href='http://fonts.googleapis.com/css?family=Bonbon' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Butterfly+Kids' rel='stylesheet' type='text/css'>

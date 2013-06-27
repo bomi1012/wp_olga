@@ -341,3 +341,10 @@ color: #7a7a7a;
 .leerzeichen{
    margin-right: 6px;
 }
+
+.black{
+    color: black;
+}
+a.no-hover:hover{
+    text-decoration:none;
+}

@@ -65,7 +65,9 @@ if (isset($_POST["submit"])) {
             </div>
             <?php } ?>
             <?php if(!empty($value[Constans::EMAIL])){?>
-            <div style="float: left"><i class="icon-envelope"> </i> <a href="mailto:<?php echo $value[Constans::EMAIL]?>"><?php echo $value[Constans::EMAIL]?> </a> </div>
+            <div style="float: left">
+                <a href="mailto:<?php echo $value[Constans::EMAIL]?>" class="no-hover"><i class="icon-envelope black"> </i></a> 
+            </div>
             <?php } ?>
             <div style="float: right; margin-bottom: 5px;"><address ><?php echo $value[Constans::DT]?></address></div>
             
