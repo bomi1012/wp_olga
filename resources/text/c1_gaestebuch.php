@@ -60,12 +60,12 @@ if (isset($_POST["submit"])) {
             <p><?php echo $value[Constans::NACHRICHT]?></p>
             <div class="leerzeile"></div>
             <?php if(!empty($value[Constans::ADMIN_ANTWORT])){?>
-            <div class="alert alert-success">
+            <div class="alert alert-success">                
                 <strong><?php echo Constans::KW_NAME?>: </strong> <?php echo $value[Constans::ADMIN_ANTWORT]?>
             </div>
             <?php } ?>
             <?php if(!empty($value[Constans::EMAIL])){?>
-            <div style="float: left"><address >Email: <a href="mailto:<?php echo $value[Constans::EMAIL]?>"><?php echo $value[Constans::EMAIL]?></a></address></div>
+            <div style="float: left"><i class="icon-envelope"> </i> <a href="mailto:<?php echo $value[Constans::EMAIL]?>"><?php echo $value[Constans::EMAIL]?> </a> </div>
             <?php } ?>
             <div style="float: right; margin-bottom: 5px;"><address ><?php echo $value[Constans::DT]?></address></div>
             
