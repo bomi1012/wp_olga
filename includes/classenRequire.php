@@ -14,6 +14,7 @@ set_error_handler("customError");
     @include 'seiten/DatenBank.php';
     @include 'seiten/GastBook.php';
     @include 'seiten/Adminarea.php';
+    @include 'seiten/Album.php';
     
     
 ?>
