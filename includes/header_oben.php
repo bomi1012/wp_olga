@@ -1,4 +1,22 @@
+<?php
+$admin = new Adminarea();
+/**
+ * Если на странице Админ
+ */
+if (isset($_COOKIE[Constans::ROLE]) && $_COOKIE[Constans::ROLE] == Constans::PAGE_ADMIN) {
+    $admin->setStatus(true);
+}
+?>
 <div class="bild_oben">
+    <?php if ($admin->getStatus() == true) { ?>
+        <div style="position: absolute; z-index: 100; float: left; top: 15px; margin-left: 40px;">
+            <a href="<?php echo Constans::PAGE_ADMIN . Constans::PHP ?>" class="no-hover">
+                <acronym title="Adminbereich">
+                    <i class="icon-gears icon-large" style="color: #308da2" alt="Admin"></i>
+                </acronym>
+            </a>
+        </div>
+    <?php } ?>
     <a href="http://www.tagesmutter-landau.de">
         <img src="<?php echo Constans::IMAGE_PATCH ?>tm_kinder3.png" alt="<?php echo Constans::UEBERSCHRIFT_INDEX_1 . " " . Constans::KW_TAGESMUTTER ?>" style="height: 161px; ">
     </a>
