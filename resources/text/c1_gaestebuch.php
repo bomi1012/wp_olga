@@ -15,6 +15,43 @@ if (isset($_POST["submit"])) {
     }
 }
 ?>
+<!-- Lesen -->
+
+<div class="article_text c1" id="text_lesen">
+    <?php
+    $gb->Count();
+    $gb->setMaxPage($gb->getCount());
+    if ($gb->getCount() != 0) {
+        if ($gb->getMaxPage() == 1) {
+            foreach ($gb->GetAllFromGastBook(0) as $value) {
+                ?>
+    <fieldset class="kommentar" id="kommentar_<?php echo $value[Constans::ID]?>">
+        <legend><?php echo $value[Constans::NAME]?>
+            <address class="right size-14 adress-gastbook"><?php echo $value[Constans::DT]?></address>
+            <?php if(!empty($value[Constans::EMAIL])){?>            
+                <a href="mailto:<?php echo $value[Constans::EMAIL]?>" class="no-hover right size-14"><i class="icon-envelope black"> </i></a>                  
+            <?php } ?>
+                
+        </legend>
+        <div class="padding-bottom-20">
+            <p class="padding-left-30"><?php echo $value[Constans::NACHRICHT]?></p>
+            <?php if(!empty($value[Constans::ADMIN_ANTWORT])){?>
+            <div class="alert alert-success">                
+                <strong><?php echo Constans::KW_NAME?>: </strong> <?php echo $value[Constans::ADMIN_ANTWORT]?>
+            </div>
+            <?php } ?>
+        </div>
+    </fieldset>
+                    <?php
+            }
+        }
+    }else{
+        //TODO: keine 
+    }
+    ?>
+</div>
+
+
 <!-- Erstellen -->
 
 <div class="article_text c1" id="text_erstellen">
@@ -42,42 +79,4 @@ if (isset($_POST["submit"])) {
         <a href="#" class="close right" data-dismiss="alert">&times;</a>
         * Pflichtfeld
     </div>
-</div>
-
-<!-- Lesen -->
-
-<div class="article_text c1" id="text_lesen">
-    <?php
-    $gb->Count();
-    $gb->setMaxPage($gb->getCount());
-    if ($gb->getCount() != 0) {
-        if ($gb->getMaxPage() == 1) {
-            foreach ($gb->GetAllFromGastBook(0) as $value) {
-                ?>
-    <fieldset class="kommentar" id="kommentar_<?php echo $value[Constans::ID]?>">
-        <legend><?php echo $value[Constans::NAME]?></legend>
-        <div>
-            <p><?php echo $value[Constans::NACHRICHT]?></p>
-            <div class="leerzeile"></div>
-            <?php if(!empty($value[Constans::ADMIN_ANTWORT])){?>
-            <div class="alert alert-success">                
-                <strong><?php echo Constans::KW_NAME?>: </strong> <?php echo $value[Constans::ADMIN_ANTWORT]?>
-            </div>
-            <?php } ?>
-            <?php if(!empty($value[Constans::EMAIL])){?>
-            <div style="float: left">
-                <a href="mailto:<?php echo $value[Constans::EMAIL]?>" class="no-hover"><i class="icon-envelope black"> </i></a> 
-            </div>
-            <?php } ?>
-            <div style="float: right; margin-bottom: 5px;"><address ><?php echo $value[Constans::DT]?></address></div>
-            
-        </div>
-    </fieldset>
-                    <?php
-            }
-        }
-    }else{
-        //TODO: keine 
-    }
-    ?>
 </div>

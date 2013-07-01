@@ -11,8 +11,8 @@
 <link rel="stylesheet" href="resources/css/BreadCrumb.css" type="text/css" media="all">
 <link rel="stylesheet" href="resources/css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="resources/css/layout.css" type="text/css" media="all">
-<link rel="stylesheet" href="resources/css/style.css" type="text/css" media="all">
 <link rel="stylesheet" href="resources/css/bootstrap.css" type="text/css" media="all">
+<link rel="stylesheet" href="resources/css/style.css" type="text/css" media="all">
 <!--
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
 -->

@@ -29,14 +29,13 @@ if (isset($result) && $result == true) {
 
         <label><?php echo Constans::EMAIL ?>*:</label>
         <div class="input-prepend"><span class="add-on"><i class="icon-envelope"></i></span>
-            <input required type="email" id="id_<?php echo Constans::EMAIL ?>" name="<?php echo Constans::EMAIL ?>">
+            <input required type="email" placeholder="name@mail.de" id="id_<?php echo Constans::EMAIL ?>" name="<?php echo Constans::EMAIL ?>">
         </div>  
         <div class="leerzeile"></div>
 
         <label><?php echo Constans::NACHRICHT ?>*:</label>
         <textarea required rows="6" class="input-xlarge-area norezise" name="<?php echo Constans::NACHRICHT ?>" id="id_<?php echo Constans::NACHRICHT ?>"></textarea>
-        <div class="leerzeile"></div>
-
+        <div class="leerzeile"></div>       
         <button type="submit" class="btn btn-success right leerzeichen" name="submit">
             <i class="icon-white icon-check"></i> Nachricht senden
         </button>
