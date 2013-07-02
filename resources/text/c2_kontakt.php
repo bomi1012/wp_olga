@@ -11,3 +11,4 @@
     <!--http://www.plugolabs.com/twitter-bootstrap-button-generator/--> 
 </div>
 
+<div class="contakt-bild"></div>
