@@ -1,9 +1,8 @@
 <?php
 
-class GastBook {
+class GastBookService {
 
     private $_db;
-    private $_new_id;
     private $_count;
     public $_anzahl = 15;
     private $_maxPage;
@@ -27,37 +26,38 @@ class GastBook {
         return $this->_count;
     }
 
-    public function getNew_id() {
-        return $this->_new_id;
-    }
+
 
     function __construct() {
         $this->_db = new DatenBank();
     }
 
-    public function InsertInDB($name, $email, $kommentar) {
-        $this->_new_id = $this->_db->InsertToGastBook($name, $email, $kommentar);
+    public function InsertInDB($gbModel) {
+        $gbModel->setId($this->_db->InsertToGastBook($gbModel->getName(), $gbModel->getEmail(), $gbModel->getMessage()));
     }
 
     public function GetAllFromGastBook($limit) {
         $array = array();
-        $result = $this->_db->GetAllFromDBWithLimitOnlyShow("gastbook", "desc", $limit, $this->_anzahl);
+        $result = $this->_db->GetAllFromDBWithLimitOnlyShow(GastBookModel::TABLE_NAME, "desc", $limit, $this->_anzahl);
         while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
-            $array_temp = array(Constans::ID => $row["id"], Constans::NAME => $row["benutzer_name"], Constans::EMAIL => $row["benutzer_email"],
-                Constans::NACHRICHT => $row["benutzer_message"], Constans::DT => $row["datetime"],
-                Constans::ADMIN_ANTWORT => $row["admin_antwort"]);
-            array_push($array, $array_temp);
+            $modelGB = new GastBookModel();
+                $modelGB->setToModelAll($row["id"], $row["benutzer_name"], $row["benutzer_email"], 
+                        $row["benutzer_message"], $row["datetime"], $row["admin_antwort"], NULL);
+                array_push($array, $modelGB);
         }
         return $array;
     }
 
     public function Count() {
-        $this->_db->GetCountFromDBOnlyShow("gastbook");
+        $this->_db->GetCountFromDBOnlyShow(GastBookModel::TABLE_NAME);
         $this->_count = $this->_db->getCount();
     }
 
-    public function NachrichtSenden($id, $name, $email, $nachricht) {
-        $nachricht = nl2br($nachricht);
+    public function NachrichtSenden($gbModel) {
+        $id = $gbModel->getId();
+        $name = $gbModel->getName();
+        $email = $gbModel->getEmail();
+        $nachricht = nl2br($gbModel->getMessage());
         $to = $this->_myEmail;
         $subject = "tagesmutter-landau.de: ein Kommentar in Gaestebuch (id: $id)";
         $message = "<body>

@@ -12,9 +12,11 @@ set_error_handler("customError");
     @include 'seiten/Info.php';
     @include 'seiten/Kontakt.php';
     @include 'seiten/DatenBank.php';
-    @include 'seiten/GastBook.php';
+    @include 'seiten/GastBook_Service.php';
+    @include 'seiten/GastBook_Model.php';
     @include 'seiten/Adminarea.php';
     @include 'seiten/Album.php';
+    
     
     
 ?>

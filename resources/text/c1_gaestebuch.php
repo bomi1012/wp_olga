@@ -1,11 +1,13 @@
 <?php
-$gb = new GastBook();
+$gbService = new GastBookService();
 if (isset($_POST["submit"])) {
+    $gbModel = new GastBookModel();
     $name = $model->Umlaute($_POST[Constans::NAME]);
-    $nachricht = $model->Umlaute($_POST[Constans::NACHRICHT]);
-    $gb->InsertInDB($name, $_POST[Constans::EMAIL], $nachricht);
-    if (is_numeric($gb->getNew_id()) && $gb->getNew_id() > 0) {
-        $gb->NachrichtSenden($gb->getNew_id(), $name, $_POST[Constans::EMAIL], $nachricht)
+    $nachricht = $model->Umlaute($_POST[Constans::NACHRICHT]);    
+    $gbModel->setFromForm($name, $_POST[Constans::EMAIL], $nachricht);      
+    $gbService->InsertInDB($gbModel);
+    if (is_numeric($gbModel->getId()) && $gbModel->getId() > 0) {
+        $gbService->NachrichtSenden($gbModel)
         ?>
         <div class="alert alert-info alert-oben">
             <a href="#" class="close right" data-dismiss="alert">&times;</a>
@@ -16,28 +18,30 @@ if (isset($_POST["submit"])) {
 }
 ?>
 <!-- Lesen -->
-
 <div class="article_text c1" id="text_lesen">
     <?php
-    $gb->Count();
-    $gb->setMaxPage($gb->getCount());
-    if ($gb->getCount() != 0) {
-        if ($gb->getMaxPage() == 1) {
-            foreach ($gb->GetAllFromGastBook(0) as $value) {
+    $gbService->Count();
+    $gbService->setMaxPage($gbService->getCount());
+    if ($gbService->getCount() != 0) {
+        if ($gbService->getMaxPage() == 1) {
+            foreach ($gbService->GetAllFromGastBook(0) as $value) {
                 ?>
-    <fieldset class="kommentar" id="kommentar_<?php echo $value[Constans::ID]?>">
-        <legend><?php echo $value[Constans::NAME]?>
-            <address class="right size-14 adress-gastbook"><?php echo $value[Constans::DT]?></address>
-            <?php if(!empty($value[Constans::EMAIL])){?>            
-                <a href="mailto:<?php echo $value[Constans::EMAIL]?>" class="no-hover right size-14"><i class="icon-envelope black"> </i></a>                  
+    <fieldset class="kommentar" id="kommentar_<?php echo $value->getId() ?>">
+        <legend><?php echo $value->getName() ?>
+            <address class="right size-14 adress-gastbook"><?php echo $value->getDateTime() ?></address>
+            <?php  $em = $value->getEmail();
+                if(!empty($em)){?>            
+                <a href="mailto:<?php echo $value->getEmail()?>" class="no-hover right size-14"><i class="icon-envelope-alt black"> </i></a>                  
             <?php } ?>
                 
         </legend>
         <div class="padding-bottom-20">
-            <p class="padding-left-30"><?php echo $value[Constans::NACHRICHT]?></p>
-            <?php if(!empty($value[Constans::ADMIN_ANTWORT])){?>
+            <p class="padding-left-30"><?php echo $value->getMessage() ?></p>
+            <?php 
+            $an = $value->getAdminAntwort();
+            if(!empty($an)){?>
             <div class="alert alert-success">                
-                <strong><?php echo Constans::KW_NAME?>: </strong> <?php echo $value[Constans::ADMIN_ANTWORT]?>
+                <strong><?php echo Constans::KW_NAME?>: </strong> <?php echo $value->getAdminAntwort();?>
             </div>
             <?php } ?>
         </div>

@@ -100,42 +100,44 @@ if ($admin->getStatus() == false) {
         if ($result != 0) { // если что-то нашел - то очень хорошо!
             foreach ($result as $value) { // читаем и выводим на экран
                 ?>
-                <div class="schow_<?php echo $value[Constans::SHOW] ?>">
-                    <fieldset id="set_<?php echo $value[Constans::ID]; ?>">
-                        <legend><?php echo "Kommentar id: " . $value[Constans::ID] ?></legend>
+                <div class="schow_<?php echo $value->getShow() ?>">
+                    <fieldset id="set_<?php echo $value->getId() ?>">
+                        <legend><?php echo "Kommentar id: " .  $value->getId() ?></legend>
                         <form class="form-horizontal" action='' method="POST" accept-charset="utf-8">
                             <div class="input-prepend"><span class="add-on"><i class="icon-user"></i></span>
-                                <input required style="width: 180px;" value="<?php echo $value[Constans::NAME] ?>" required type="text" name="<?php echo Constans::NAME ?>">
+                                <input required style="width: 180px;" value="<?php echo $value->getName()?>" required type="text" 
+                                       name="<?php echo Constans::NAME ?>">
                             </div>
 
 
                             <div class="input-prepend  right" ><span class="add-on"><i class="icon-envelope"></i></span>
-                                <input style="width: 180px;" value="<?php echo $value[Constans::EMAIL] ?>" type="text" name="<?php echo Constans::EMAIL ?>">            
+                                <input style="width: 180px;" value="<?php echo $value->getEmail() ?>" type="text" 
+                                       name="<?php echo Constans::EMAIL ?>">            
                             </div>
                             <div class="leerzeile"></div>
 
                             <label><?php echo Constans::NACHRICHT ?>:</label>
-                            <textarea required rows="6" class="input-xlarge-area norezise" name="<?php echo Constans::NACHRICHT ?>"><?php echo $value[Constans::NACHRICHT] ?></textarea>
+                            <textarea required rows="6" class="input-xlarge-area norezise" name="<?php echo Constans::NACHRICHT ?>"><?php echo $value->getMessage() ?></textarea>
                             <div class="leerzeile"></div>
 
                             <label><?php echo Constans::ANTWORT ?>:</label>
-                            <textarea rows="3" class="input-xlarge-area norezise" name="<?php echo Constans::ADMIN_ANTWORT ?>"><?php echo $value[Constans::ADMIN_ANTWORT] ?></textarea>
+                            <textarea rows="3" class="input-xlarge-area norezise" name="<?php echo Constans::ADMIN_ANTWORT ?>"><?php echo $value->getAdminAntwort() ?></textarea>
 
 
-                            <input type="hidden" value="<?php echo $value[Constans::ID] ?>" name="<?php echo Constans::ID ?>">
+                            <input type="hidden" value="<?php echo $value->getId() ?>" name="<?php echo Constans::ID ?>">
                             <div class="leerzeile"></div>
                             <?php
                             $color = "gray";
-                            if ($value[Constans::SHOW] == 0) {
+                            if ($value->getShow() == 0) {
                                 $color = "lightcoral";
-                            } elseif ($value[Constans::SHOW] == 1) {
+                            } elseif ($value->getShow() == 1) {
                                 $color = "green";
                             }
                             ?>
                             <select name="<?php echo Constans::SHOW ?>" style="width: 210px; border: <?php echo $color ?> solid 1px">
                                 <?php
                                 foreach ($admin->getAction() as $key => $action) {
-                                    if ($value[Constans::SHOW] == 0 && $action == "nopublic") {
+                                    if ($value->getShow() == 0 && $action == "nopublic") {
                                         echo "<option value='" . $key . "' selected>" . $action . "</option>";
                                     } else {
                                         echo "<option value='" . $key . "'>" . $action . "</option>";

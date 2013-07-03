@@ -1,7 +1,6 @@
 <?php
 
 class Adminarea {
-
     private $_db;
     private $_status = false;
     private $_id = 0;
@@ -54,15 +53,15 @@ class Adminarea {
     }
 
     public function GetAllFromGastBook() {
-        $array = array();
-        $result = $this->_db->GetAllFromDB("gastbook", "desc");
+        $array = array();       
+        $result = $this->_db->GetAllFromDB(GastBookModel::TABLE_NAME, "desc");
         $this->_count = $this->_db->getCount();
         if ($this->_count != 0) {            
-            while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
-                $array_temp = array(Constans::ID => $row["id"], Constans::NAME => $row["benutzer_name"], Constans::EMAIL => $row["benutzer_email"],
-                    Constans::NACHRICHT => $row["benutzer_message"], Constans::DT => $row["datetime"],
-                    Constans::ADMIN_ANTWORT => $row["admin_antwort"], Constans::SHOW => $row["hide_show"]);
-                array_push($array, $array_temp);
+            while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {                
+                $modelGB = new GastBookModel();
+                $modelGB->setToModelAll($row["id"], $row["benutzer_name"], $row["benutzer_email"], 
+                        $row["benutzer_message"], $row["datetime"], $row["admin_antwort"], $row["hide_show"]);
+                array_push($array, $modelGB);
             }
         }  else {
             $array = $this->_count;
