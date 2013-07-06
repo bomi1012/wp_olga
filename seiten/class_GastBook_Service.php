@@ -1,8 +1,7 @@
 <?php
 
-class GastBookService {
+class GastBookService extends DatenBankService{
 
-    private $_db;
     private $_count;
     public $_anzahl = 15;
     private $_maxPage;
@@ -26,31 +25,29 @@ class GastBookService {
         return $this->_count;
     }
 
-
-
     function __construct() {
-        $this->_db = new DatenBank();
+        
     }
 
     public function InsertInDB($gbModel) {
-        $gbModel->setId($this->_db->InsertToGastBook($gbModel->getName(), $gbModel->getEmail(), $gbModel->getMessage()));
+        $gbModel->setId(parent::InsertInTable($gbModel, GastBookModel::TABLE_NAME));
     }
 
     public function GetAllFromGastBook($limit) {
         $array = array();
-        $result = $this->_db->GetAllFromDBWithLimitOnlyShow(GastBookModel::TABLE_NAME, "desc", $limit, $this->_anzahl);
+        $result = parent::GetAllFromDBWithLimitOnlyShow(GastBookModel::TABLE_NAME, "desc", $limit, $this->_anzahl);
         while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
             $modelGB = new GastBookModel();
-                $modelGB->setToModelAll($row["id"], $row["benutzer_name"], $row["benutzer_email"], 
-                        $row["benutzer_message"], $row["datetime"], $row["admin_antwort"], NULL);
+                $modelGB->setToModelAll($row[DatenBankModel::ID], $row[DatenBankModel::NAME_COL_GB], $row[DatenBankModel::EMAIL_COL_GB], 
+                        $row[DatenBankModel::MESSAGE_COL_GB], $row[DatenBankModel::DATE_COL_GB], $row[DatenBankModel::ADMIN_COL_GB], NULL);
                 array_push($array, $modelGB);
         }
         return $array;
     }
 
     public function Count() {
-        $this->_db->GetCountFromDBOnlyShow(GastBookModel::TABLE_NAME);
-        $this->_count = $this->_db->getCount();
+        parent::GetCountFromDBOnlyShow(GastBookModel::TABLE_NAME);
+        $this->_count = parent::getCount();
     }
 
     public function NachrichtSenden($gbModel) {

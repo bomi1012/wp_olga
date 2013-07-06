@@ -6,7 +6,7 @@
  */
 if (isset($_POST['sub_logaus'])) {
     $admin->CoockieAus();
-    $admin->setStatus(false);
+    $admin->CoockieStatus();
     $admin->setId(0);
 }
 /**
@@ -14,9 +14,6 @@ if (isset($_POST['sub_logaus'])) {
  */
 if (isset($_POST["sub_login"])) {
     $admin->Anloggen($_POST[Constans::NAME], $_POST[Constans::PW]);
-    if ($admin->getStatus() == true) {
-        $admin->CoockieEin();
-    }
 }
 /**
  * Update
@@ -27,7 +24,7 @@ if (isset($_POST["sub_update"])) {
      * @see Adminarea.php: array(1 => "public", 0 => "nopublic", 2 => "delete");
      */
     if ($_POST[Constans::SHOW] == 2) {
-        $res = $admin->DeleteFromTable($_POST[Constans::ID], "gastbook");
+        $res = $admin->Delete($_POST[Constans::ID], "gastbook");
         if ($res == true) { // уделение прошло на УРА!!
             ?>
             <div class="alert alert-success alert-oben-big">
@@ -44,7 +41,10 @@ if (isset($_POST["sub_update"])) {
             <?php
         }
     } else { // Если не удаление, то update. 
-        $res = $admin->UpdateInGastBook($_POST[Constans::ID], $model->Umlaute($_POST[Constans::NAME]), $_POST[Constans::EMAIL], $model->Umlaute($_POST[Constans::NACHRICHT]), $model->Umlaute($_POST[Constans::ADMIN_ANTWORT]), $_POST[Constans::SHOW]);
+        $modelGB = new GastBookModel();
+        
+        $modelGB->setToModelAll($_POST[Constans::ID], $model->Umlaute($_POST[Constans::NAME]), $_POST[Constans::EMAIL], $model->Umlaute($_POST[Constans::NACHRICHT]), NULL, $model->Umlaute($_POST[Constans::ADMIN_ANTWORT]), $_POST[Constans::SHOW]);
+        $res = $admin->UpdateInGastBook($modelGB);
         if ($res == TRUE) { // Update прошел на УРА!!
             ?>
             <div class="alert alert-success alert-oben-big">

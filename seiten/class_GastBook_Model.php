@@ -1,6 +1,6 @@
 <?php
 
-class GastBookModel {
+class GastBookModel{
     const TABLE_NAME = "gastbook";
     
     private $_id = NULL;

@@ -1,11 +1,9 @@
 <?php
 $admin = new Adminarea();
+$admin->CoockieStatus();
 /**
  * Если на странице Админ
  */
-if (isset($_COOKIE[Constans::ROLE]) && $_COOKIE[Constans::ROLE] == Constans::PAGE_ADMIN) {
-    $admin->setStatus(true);
-}
 ?>
 <div class="bild_oben">
     <?php if ($admin->getStatus() == true) { ?>
