@@ -1,7 +1,7 @@
 <?php
 
 class Model {
-
+   
     private $_title;
     private $_keywords;
     private $_description;
@@ -51,10 +51,8 @@ class Model {
      * @param string $page die Seitenandresse
      * @param int $ebene Ebene
      */
-    public function __construct($page, $ebene) {
-        //Info holen
-
-        $info = new Info();
+    public function __construct($page, $ebene) {     
+        $info = new Info();        
         $info->ModelForHead($page);
         $this->ArrayToGet($info->getArray(), Constans::PART_HEAD);
 
