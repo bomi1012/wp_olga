@@ -14,6 +14,7 @@ if (isset($_POST['sub_logaus'])) {
  */
 if (isset($_POST["sub_login"])) {
     $admin->Anloggen($_POST[Constans::NAME], $_POST[Constans::PW]);
+    $admin->CoockieStatus(true);
 }
 /**
  * Update
@@ -42,12 +43,12 @@ if (isset($_POST["sub_update"])) {
         }
     } else { // Если не удаление, то update. 
         $modelGB = new GastBookModel();
-        
+
         $modelGB->setToModelAll($_POST[Constans::ID], $model->Umlaute($_POST[Constans::NAME]), $_POST[Constans::EMAIL], $model->Umlaute($_POST[Constans::NACHRICHT]), NULL, $model->Umlaute($_POST[Constans::ADMIN_ANTWORT]), $_POST[Constans::SHOW]);
         $res = $admin->UpdateInGastBook($modelGB);
         if ($res == TRUE) { // Update прошел на УРА!!
             ?>
-            <div class="alert alert-success alert-oben-big">
+            <div class="alert alert-success alert-oben">
                 <a href="#" class="close right" data-dismiss="alert">&times;</a>
                 Erfolgreich!
             </div>
@@ -73,7 +74,17 @@ if ($admin->getStatus() == false) {
     if (!isset($_POST["sub_login"])) {
         ?>
         <div class="article_text c1" id="text_login">
-            <form class="form-horizontal" action='' method="POST" accept-charset="utf-8">
+            <?php
+            if (isset($_GET['request']) && $_GET['request'] == "on") {
+                ?>
+                <div class="alert alert-error">
+                    <a href="#" class="close right" data-dismiss="alert">&times;</a>
+                    eingegebene Login oder Passwort sind falsch
+                </div>
+                <?php
+            }
+            ?>
+            <form class="form-horizontal" action='<?php echo $_SERVER['PHP_SELF'] ?>?request=on' method="POST" accept-charset="utf-8">
                 <div class="input-prepend"><span class="add-on"><i class="icon-user"></i></span>
                     <input placeholder="admin-name" autofocus required type="text" id="id_<?php echo Constans::NAME ?>" name="<?php echo Constans::NAME ?>">
                 </div>
@@ -100,12 +111,12 @@ if ($admin->getStatus() == false) {
         if ($result != 0) { // если что-то нашел - то очень хорошо!
             foreach ($result as $value) { // читаем и выводим на экран
                 ?>
-                <div class="schow_<?php echo $value->getShow() ?>">
+                <div class="show_<?php echo $value->getShow() ?>">
                     <fieldset id="set_<?php echo $value->getId() ?>">
-                        <legend><?php echo "Kommentar id: " .  $value->getId() ?></legend>
+                        <legend><?php echo "Kommentar id: " . $value->getId() ?></legend>
                         <form class="form-horizontal" action='' method="POST" accept-charset="utf-8">
                             <div class="input-prepend"><span class="add-on"><i class="icon-user"></i></span>
-                                <input required style="width: 180px;" value="<?php echo $value->getName()?>" required type="text" 
+                                <input required style="width: 180px;" value="<?php echo $value->getName() ?>" required type="text" 
                                        name="<?php echo Constans::NAME ?>">
                             </div>
 
@@ -157,5 +168,5 @@ if ($admin->getStatus() == false) {
         }
         ?>
     </div>
-    <?php
-}?>
+    <?php }
+?>

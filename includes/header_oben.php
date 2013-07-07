@@ -1,5 +1,5 @@
 <?php
-$admin = new Adminarea();
+$admin = AdminService::getInstance();
 $admin->CoockieStatus();
 /**
  * Если на странице Админ

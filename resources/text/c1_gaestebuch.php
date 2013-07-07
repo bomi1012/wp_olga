@@ -3,8 +3,8 @@ $gbService = new GastBookService();
 if (isset($_POST["submit"])) {
     $gbModel = new GastBookModel();
     $name = $model->Umlaute($_POST[Constans::NAME]);
-    $nachricht = $model->Umlaute($_POST[Constans::NACHRICHT]);    
-    $gbModel->setFromForm($name, $_POST[Constans::EMAIL], $nachricht);      
+    $nachricht = $model->Umlaute($_POST[Constans::NACHRICHT]);
+    $gbModel->setFromForm($name, $_POST[Constans::EMAIL], $nachricht);
     $gbService->InsertInDB($gbModel);
     if (is_numeric($gbModel->getId()) && $gbModel->getId() > 0) {
         $gbService->NachrichtSenden($gbModel)
@@ -26,30 +26,34 @@ if (isset($_POST["submit"])) {
         if ($gbService->getMaxPage() == 1) {
             foreach ($gbService->GetAllFromGastBook(0) as $value) {
                 ?>
-    <fieldset class="kommentar" id="kommentar_<?php echo $value->getId() ?>">
-        <legend><?php echo $value->getName() ?>
-            <address class="right size-14 adress-gastbook"><?php echo $value->getDateTime() ?></address>
-            <?php  $em = $value->getEmail();
-                if(!empty($em)){?>            
-                <a href="mailto:<?php echo $value->getEmail()?>" class="no-hover right size-14"><i class="icon-envelope-alt black"> </i></a>                  
+    <div class="show_1">
+                <fieldset class="kommentar" id="kommentar_<?php echo $value->getId() ?>">
+                    <legend><?php echo $value->getName() ?>
+                        <address class="right size-14 adress-gastbook"><?php echo $value->getDateTime() ?></address>
+                        <?php $em = $value->getEmail();
+                        if (!empty($em)) {
+                            ?>            
+                            <a href="mailto:<?php echo $value->getEmail() ?>" class="no-hover right size-14"><i class="icon-envelope-alt black"> </i></a>                  
             <?php } ?>
-                
-        </legend>
-        <div class="padding-bottom-20">
-            <p class="padding-left-30"><?php echo $value->getMessage() ?></p>
-            <?php 
-            $an = $value->getAdminAntwort();
-            if(!empty($an)){?>
-            <div class="alert alert-success">                
-                <strong><?php echo Constans::KW_NAME?>: </strong> <?php echo $value->getAdminAntwort();?>
-            </div>
-            <?php } ?>
+
+                    </legend>
+                    <div class="padding-bottom-20">
+                        <p class="padding-left-30"><?php echo $value->getMessage() ?></p>
+                        <?php
+                        $an = $value->getAdminAntwort();
+                        if (!empty($an)) {
+                            ?>
+                            <div class="alert alert-success">                
+                                <strong><?php echo Constans::KW_NAME ?>: </strong> <?php echo $value->getAdminAntwort(); ?>
+                            </div>
+                <?php } ?>
+                    </div>
+                </fieldset>
         </div>
-    </fieldset>
-                    <?php
+                <?php
             }
         }
-    }else{
+    } else {
         //TODO: keine 
     }
     ?>

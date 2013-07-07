@@ -1,12 +1,12 @@
 <?php
 
-class Adminarea extends DatenBankService {
+class AdminService extends DatenBankService {
 
+    static private $instance = null;
     private $_status = false;
     private $_id = 0;
     private $_action = array(1 => "public", 0 => "nopublic", 2 => "delete");
     private $_count;
-
     public function getCount() {
         return $this->_count;
     }
@@ -27,6 +27,13 @@ class Adminarea extends DatenBankService {
         return $this->_status;
     }
 
+    static public function getInstance() {
+        if (null === self::$instance) {
+            self::$instance = new self;
+        }
+        return self::$instance;
+    }
+
     function __construct() {
         
     }
@@ -37,7 +44,7 @@ class Adminarea extends DatenBankService {
         if ($id > 0) {
             $this->CoockieEin();
             $this->Refresch();
-        }
+        } 
     }
 
     public function CoockieEin() {
@@ -49,18 +56,22 @@ class Adminarea extends DatenBankService {
         $this->Refresch();
     }
 
-    public function CoockieStatus() {
+    public function CoockieStatus($refresh = false) {
+
         if (isset($_COOKIE[Constans::ROLE]) && $_COOKIE[Constans::ROLE] == Constans::PAGE_ADMIN) {
             $this->_status = true;
         } else {
             $this->_status = false;
         }
+        if ($refresh == true) {
+            $this->Refresch();
+        }
     }
 
     private function Refresch() {
-        header('Location: '.$_SERVER['REQUEST_URI']);
+        header('Location: ' . $_SERVER['REQUEST_URI']);
     }
-    
+
     public function GetAllFromGastBook() {
         $array = array();
         $result = parent::GetAllFromDB(GastBookModel::TABLE_NAME, "desc");

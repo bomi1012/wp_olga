@@ -4,7 +4,7 @@
     if ($admin->getStatus() == true) {
         ?>
         <div id="text_logaus">
-            <form class="form-horizontal" action='' method="POST" accept-charset="utf-8">
+            <form class="form-horizontal" action='<?php echo $_SERVER['PHP_SELF'] ?>' method="POST" accept-charset="utf-8">
                 <button type="submit" class="btn btn-danger leerzeichen right" name="sub_logaus">
                     <i class="icon-white icon-off"></i> auslogen
                 </button>
