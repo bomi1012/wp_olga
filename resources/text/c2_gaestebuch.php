@@ -42,7 +42,10 @@ function gaestebuch(event){
         }
     } else if(event.data.click == writeDiv){
         if(unclicable != writeDiv){
+            $("#id_Name").addClass("test");
+            $("#id_Name").attr("test123");
             Bearbeitung(write, writeDiv, "gaestebuch");
+            $("#id_Name").focus();
         }
     }         
 }

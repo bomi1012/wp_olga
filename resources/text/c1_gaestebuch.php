@@ -66,7 +66,7 @@ if (isset($_POST["submit"])) {
     <form class="form-horizontal" action='' method="POST" accept-charset="utf-8">
         <label><?php echo Constans::NAME ?>*:</label>
         <div class="input-prepend"><span class="add-on"><i class="icon-user"></i></span>
-            <input autofocus required type="text" id="id_<?php echo Constans::NAME ?>" name="<?php echo Constans::NAME ?>">
+            <input required type="text" id="id_<?php echo Constans::NAME ?>" name="<?php echo Constans::NAME ?>">
         </div>
         <div class="leerzeile"></div>
 
