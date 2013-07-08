@@ -102,7 +102,7 @@ Ersetzen Sie das Zeichen ß durch die Zeichenfolge &szlig;
     const ICON_PATCH = "resources/icons/";
     const TEXT_PATCH = "resources/text/";
     const PDF_PATCH = "resources/pdf/";
-    const LOG_PATCH = "resources/log/";
+    const LOG_PATCH = "resources/logging/";
     const PHP = ".php";
     const GOOGLEMAP = "https://maps.google.de/maps?f=q&amp;source=s_q&amp;hl=de&amp;geocode=&amp;q=Willy-Brandt-Stra%C3%9Fe+40,+Landau+in+der+Pfalz&amp;aq=3&amp;oq=Willy+Brandt+Str.+40&amp;sll=49.015849,8.409534&amp;sspn=0.262096,0.617294&amp;ie=UTF8&amp;hq=&amp;hnear=Willy-Brandt-Stra%C3%9Fe+40,+76829+Landau+in+der+Pfalz,+Rheinland-Pfalz&amp;t=m&amp;ll=49.189943,8.108511&amp;spn=0.002454,0.00456&amp;z=17&amp;iwloc=A&amp;output=embed";
     

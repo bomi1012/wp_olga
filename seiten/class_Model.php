@@ -1,5 +1,4 @@
 <?php
-
 class Model {
    
     private $_title;
@@ -51,7 +50,7 @@ class Model {
      * @param string $page die Seitenandresse
      * @param int $ebene Ebene
      */
-    public function __construct($page, $ebene) {     
+    public function __construct($page, $ebene) {
         $info = new Info();        
         $info->ModelForHead($page);
         $this->ArrayToGet($info->getArray(), Constans::PART_HEAD);
@@ -81,7 +80,7 @@ class Model {
             $this->_description = $array[Constans::ELEMENT_DESCRIPTION];
         }
     }
-
+    
     public function Umlaute($text) {
         $search = array('ä', 'ö', 'ü', 'Ä', 'Ö', 'Ü', 'ß');
         $replace = array('&auml;', '&ouml;', '&uuml;', '&Auml;', '&Ouml;', '&Uuml;', '&szlig;');

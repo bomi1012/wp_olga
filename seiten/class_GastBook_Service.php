@@ -26,8 +26,8 @@ class GastBookService extends DatenBankService{
     }
 
     function __construct() {
-        
-    }
+        parent::__construct();
+        }
 
     public function InsertInDB($gbModel) {
         $gbModel->setId(parent::InsertInTable($gbModel, GastBookModel::TABLE_NAME));

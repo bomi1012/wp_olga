@@ -35,7 +35,7 @@ class AdminService extends DatenBankService {
     }
 
     function __construct() {
-        
+        parent::__construct();
     }
 
     public function Anloggen($login, $passwort) {
