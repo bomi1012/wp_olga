@@ -260,6 +260,8 @@ blockquote:before {
 }
 .icon{
     margin: 6px 8px 0px 10px;
+    bottom: 5px;
+    position: relative;
 }
 .table_left{
     width: 130px; 
@@ -403,4 +405,9 @@ margin-bottom: -10px;
 
 .album_margin{
     margin: 0px 15px 15px 0px;
+}
+
+.img-header-oben{
+    height: 161px;
+    padding-left: 10px;
 }
