@@ -1,7 +1,7 @@
 <?php
 $album = new Album(Constans::ALBUM_PATCH, '1');
 ?>
-<div class="article_text span9">  
+<div class="article_text span">  
     <?php
     foreach ($album->get_dic() as $min => $big) {
         ?>
