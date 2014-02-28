@@ -2,10 +2,17 @@
     <p>
         <span class="firstLetter"><span>L</span></span><span>iebe Mamis und Papis.
             <br>
-            Sie suchen eine liebevolle Tagesmutter f&uuml;r Ihr Kind?
-            Dann sind Sie bei mir genau richtig! In famili&auml;rer Atmosph&auml;re betreue ich 
-            Kinder zwischen 0 und 3 Jahren. Ich bin staatlich anerkannte Kinderpflegerin und selbst 
-            Mutter von drei Kindern.      <a href="<?php echo Constans::PAGE_ABOUT.Constans::PHP?>">Erfahren Sie mehr &uuml;ber mich</a>.                                     
+            <?php 
+                echo $model->Umlaute("Sie sind auf der Suche nach einer liebevollen Betreuung für Ihr Kind? 
+                Dann haben Sie diese soeben gefunden. Wir, das sind mein Mann Hermann und ich, 
+                betreuen ganzjährig mehrere Kinder im Alter zwischen 0 und 3 Jahre in einer familiären Atmosphäre. 
+                Wer wir genau sind und was Sie bei uns erwartet, sehen Sie auf den nachfolgenden Seiten.");
+            ?>            
+            <a href="<?php echo Constans::PAGE_ABOUT.Constans::PHP?>">
+            <?php 
+                echo $model->Umlaute("Erfahren Sie hier mehr über uns");
+            ?>
+                </a>                                     
         </span>
         </p>
 </div>

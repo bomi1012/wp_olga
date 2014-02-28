@@ -85,7 +85,7 @@ div.text_oben{
     padding-top: 23px;
 }
 nav.nav{
-    width:900px; 
+    width:100%; 
     margin:0 auto; 
     list-style:none;
 }
@@ -409,5 +409,5 @@ margin-bottom: -10px;
 
 .img-header-oben{
     height: 161px;
-    padding-left: 10px;
+    padding-left: 48px;
 }

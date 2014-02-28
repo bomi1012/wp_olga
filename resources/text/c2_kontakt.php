@@ -5,6 +5,7 @@
         <?php echo Constans::MY_ADDRESS_2?>
     </p>
     <p>
+        <i class="fa fa-mobile fa-lg"></i> <?php echo Constans::MY_HANDY?> <br/> 
         <i class="icon-phone"></i> <?php echo Constans::MY_TELEFON?> <br/> 
         <i class="icon-envelope-alt"></i> <a href="mailto:<?php echo Constans::MY_EMAIL?>"><?php echo Constans::MY_EMAIL?></a>       
     </p>

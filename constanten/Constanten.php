@@ -63,7 +63,8 @@ Ersetzen Sie das Zeichen ß durch die Zeichenfolge &szlig;
     const ROLE = "role";
     const DT = "Datetime";
     const MY_EMAIL = "kb_rotkaeppchen@freenet.de";
-    const MY_TELEFON = "+4915156914244";
+    const MY_HANDY = "+4915156914244";
+    const MY_TELEFON = "06341 930843";
     const MY_ADDRESS_1 = "Willy-Brandt-Str. 40";
     const MY_ADDRESS_2 = "76829 Landau";
     
@@ -92,9 +93,9 @@ Ersetzen Sie das Zeichen ß durch die Zeichenfolge &szlig;
     const DELETE = "delete";
     
     const DES_INDEX = "Kinderbetreuung in Landau (Pfalz) bei Tagesmutter Olga B&ouml;hm";    
-    const UEBERSCHRIFT_INDEX_1 = "Olga B&ouml;hm Kinderbetreuung";
+    const UEBERSCHRIFT_INDEX_1 = "Olga und Hermann B&ouml;hm Kinderbetreuung";
     const UEBERSCHRIFT_INDEX_2 = "in Landau i.d. Pfalz";
-    const TEXT_CENTER_1 = "Liebevolle Kinderbetreuung durch eine qualifizierte Tagesmutter, ";
+    const TEXT_CENTER_1 = "Liebevolle Kinderbetreuung durch qualifizierte Tagespflegepersonen ";
     const TEXT_CENTER_2 = "ganz nach den individuellen Bed&uuml;rfnissen Ihres Kindes.";
     
     const IMAGE_PATCH = "resources/images/";
