@@ -40,7 +40,7 @@ Ersetzen Sie das Zeichen ß durch die Zeichenfolge &szlig;
     const ID = "Id";
     const SHOW = "Show";
     const HOME = "Home";
-    const ABOUT_ME = "&Uuml;ber mich";
+    const ABOUT_ME = "&Uuml;ber uns";
     const ADMIN = "Adminarea";
     const IMPRESSUM = "Impressum";
     const ADMIN_ANTWORT = "AdminAntwort";

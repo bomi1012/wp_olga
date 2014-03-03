@@ -1,6 +1,7 @@
 <?php
+
 class Model {
-   
+
     private $_title;
     private $_keywords;
     private $_description;
@@ -51,7 +52,7 @@ class Model {
      * @param int $ebene Ebene
      */
     public function __construct($page, $ebene) {
-        $info = new Info();        
+        $info = new Info();
         $info->ModelForHead($page);
         $this->ArrayToGet($info->getArray(), Constans::PART_HEAD);
 
@@ -80,7 +81,7 @@ class Model {
             $this->_description = $array[Constans::ELEMENT_DESCRIPTION];
         }
     }
-    
+
     public function Umlaute($text) {
         $search = array('ä', 'ö', 'ü', 'Ä', 'Ö', 'Ü', 'ß');
         $replace = array('&auml;', '&ouml;', '&uuml;', '&Auml;', '&Ouml;', '&Uuml;', '&szlig;');
@@ -88,19 +89,24 @@ class Model {
     }
 
     public function Alter($tag, $mon, $jah) {
-        $jetzt = mktime(0, 0, 0, date('m'), date('d'), date('Y'));
-        $gebur = mktime(0, 0, 0, $mon, $tag, $jah);
-        return intval(($jetzt - $gebur) / (3600 * 24 * 365));
+        if ($mon > date('m') || $mon == date('m') && $tag > date('d'))
+            return (date('Y') - $jah - 1);
+        else
+            return (date('Y') - $jah);
     }
-    
-   public function FirstLetter($text) {
-       $text = $this->Umlaute($text);
-       $firstLetter = $text{0};
-       
-       return "<span class='firstLetter'><span>" . $text{0} . "</span></span><span> "
-          . substr($text, 1) . " </span>";
-       
-   }
+
+    public function FirstLetter($text) {
+        $text = $this->Umlaute($text);
+        $firstLetter = $text{0};
+
+        return "<span class='firstLetter'><span>" . $text{0} . "</span></span><span> "
+                . substr($text, 1) . " </span>";
+    }
+
+    public function Link($link, $text) {
+        return "<a href = '" . $link . "'>" . $text . "</a>";
+    }
+
 }
 
 ?>

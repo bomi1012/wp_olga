@@ -1,33 +1,65 @@
 $(document).ready(function(){
-    allgemein = "Allgemein";
-    allgemeinDiv = "allgemein";
+    allgemein = "Über mich";
+    allgemeinOlga = "allgemein_olga";
+    allgemeinHermann = "allgemein_hermann";
     erfahrung = "meine Erfahrung";
-    erfahrungDiv = "erfahrung";
+    erfahrungOlga = "erfahrung_olga";
+    erfahrungHermann = "erfahrung_hermann";
         
     $('li').removeClass("last");
-    $('#ul_about').append("<li class='last' id='li_"+allgemeinDiv+"'>"+ allgemein +"</li>");
+    $('#ul_about').append("\
+            <li class='erzieher'><span id='Olga' class='navi a' onClick='reply(this.id)'>Olga</span></li>\n\
+            <li class='last' id='li_"+allgemeinOlga+"'>"+ allgemein +"</li>");
     $('.navi').addClass('a');
-    $('#about_'+allgemeinDiv).removeClass('a');
-    $('#text_'+erfahrungDiv).hide();
-    unclicable = allgemeinDiv;
-})
+    $('#about_'+allgemeinOlga).removeClass('a');
+    $('#text_'+erfahrungOlga).hide();
+    $('#text_'+allgemeinHermann).hide();
+    $('#text_'+erfahrungHermann).hide();
+    unclicable = allgemeinOlga;
+});
 // Bei Click auf "meine erfahrung"
-$('#about_erfahrung').bind("click", {
-    click:"erfahrung"
+$('#about_erfahrung_olga').bind("click", {
+    click:"erfahrung_olga"
 }, about);
-$('#about_allgemein').bind("click", {
-    click:"allgemein"
+$('#about_allgemein_olga').bind("click", {
+    click:"allgemein_olga"
 }, about);
+$('#about_erfahrung_hermann').bind("click", {
+    click:"erfahrung_hermann"
+}, about);
+$('#about_allgemein_hermann').bind("click", {
+    click:"allgemein_hermann"
+}, about);
+
+
+/**
+ * Sehe fnct_bearbeiten
+ */
+function reply(clicked_id) {
+    if (clicked_id === "Hermann") {
+       Bearbeitung(allgemein, allgemeinHermann, "about", "Hermann"); 
+    } else if (clicked_id === "Olga") {
+        Bearbeitung(allgemein, allgemeinHermann, "about", "Olga"); 
+    }
+}
     
     
 function about(event){  
-    if(event.data.click == erfahrungDiv){   
-        if(unclicable != erfahrungDiv){                
-            Bearbeitung(erfahrung, erfahrungDiv, "about");
+    if(event.data.click == erfahrungOlga){   
+        if(unclicable != erfahrungOlga){                
+            Bearbeitung(erfahrung, erfahrungOlga, "about", "Olga");
         }
-    } else if(event.data.click == allgemeinDiv){
-        if(unclicable != allgemeinDiv){
-            Bearbeitung(allgemein, allgemeinDiv, "about");
+    } else if(event.data.click == allgemeinOlga){
+        if(unclicable != allgemeinOlga){
+            Bearbeitung(allgemein, allgemeinOlga, "about", "Olga");
         }
-    }         
+    } else if(event.data.click == erfahrungHermann){   
+        if(unclicable != erfahrungHermann){                
+            Bearbeitung(erfahrung, erfahrungHermann, "about", "Hermann");
+        }
+    } else if(event.data.click == allgemeinHermann){
+        if(unclicable != allgemeinHermann) {
+            Bearbeitung(allgemein, allgemeinHermann, "about", "Hermann");
+        }
+    }       
 }
