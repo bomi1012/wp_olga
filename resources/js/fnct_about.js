@@ -15,6 +15,7 @@ $(document).ready(function(){
     $('#text_'+erfahrungOlga).hide();
     $('#text_'+allgemeinHermann).hide();
     $('#text_'+erfahrungHermann).hide();
+    $('#photo_hermann').hide();
     unclicable = allgemeinOlga;
 });
 // Bei Click auf "meine erfahrung"
@@ -48,18 +49,26 @@ function about(event){
     if(event.data.click == erfahrungOlga){   
         if(unclicable != erfahrungOlga){                
             Bearbeitung(erfahrung, erfahrungOlga, "about", "Olga");
+            $('#photo_hermann').hide();
+            $('#photo_olga').show();
         }
     } else if(event.data.click == allgemeinOlga){
         if(unclicable != allgemeinOlga){
             Bearbeitung(allgemein, allgemeinOlga, "about", "Olga");
+            $('#photo_hermann').hide();
+            $('#photo_olga').show();
         }
     } else if(event.data.click == erfahrungHermann){   
         if(unclicable != erfahrungHermann){                
             Bearbeitung(erfahrung, erfahrungHermann, "about", "Hermann");
+            $('#photo_hermann').show();
+            $('#photo_olga').hide();
         }
     } else if(event.data.click == allgemeinHermann){
         if(unclicable != allgemeinHermann) {
             Bearbeitung(allgemein, allgemeinHermann, "about", "Hermann");
+            $('#photo_hermann').show();
+            $('#photo_olga').hide();
         }
     }       
 }
