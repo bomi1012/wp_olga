@@ -271,7 +271,7 @@
     <?php
     echo $p;
     echo $model->FirstLetter("Der aktive Austausch mit Ihnen, den Eltern, ist in der Kinderbetreuung sehr wichtig. 
-        Für Elterngespräche sind wir deshalb immer offen. „Tür- und Angelgespräche“ sind jederzeit willkommen. 
+        Für Elterngespräche sind wir deshalb immer offen. &ldquo;Tür- und Angelgespräche&bdquo; sind jederzeit willkommen. 
         Eine ständige Kommunikation ist notwendig, um eine positive Arbeit im Interesse der Kinder, der Eltern und uns als 
         Tagespflegepersonen zu gestalten. Bei der Übergabe Ihres Kindes an uns sollte ein kurzer Informationsaustausch zwischen 
         Ihnen und uns stattfinden. Gespräche sind wichtig, um auf die Bedürfnisse Ihres Kindes besonders eingehen zu können 

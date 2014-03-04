@@ -74,7 +74,7 @@ Ersetzen Sie das Zeichen ß durch die Zeichenfolge &szlig;
     const KW_ROTKAEPPCHEN = "Rotk&auml;ppchen";
     const KW_SONNE = "Sonne";
     const KW_SCHMETTERLING = "Schmetterling";
-    const KW_NAME = "Olga B&ouml;hm";
+    const KW_NAME = "Olga und Hermann B&ouml;hm";
     const KW_VORWORT = "Vorwort";
     const KW_RAHMENBEDINGUNGEN = "Rahmenbedingungen";
     const KW_AUF_ZU = "&Ouml;ffnungs- und Schlie&szlig;zeiten";
