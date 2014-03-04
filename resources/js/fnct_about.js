@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    allgemein = "Über mich";
+    allgemein = "&Uuml;ber mich";
     allgemeinOlga = "allgemein_olga";
     allgemeinHermann = "allgemein_hermann";
     erfahrung = "meine Erfahrung";

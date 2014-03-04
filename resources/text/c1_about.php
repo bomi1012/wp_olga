@@ -20,7 +20,7 @@
                 unserem eigenen Haus geboren. Seit 2007 betreue ich nun schon Kinder unter 3 Jahren in unserem Haushalt. 
                 Durch meine Familie erfahre ich liebevolle Unterstützung. Mein Ehemann hat sogar selbst erfolgreich den 
                 Qualifizierungskurs zum Tagesvater absolviert. Er unterstützt mich ab Mitte des Jahres 2013 tatkräftig in 
-                der Betreuung unserer Tageskinder. Wir besuchten beide den „Erste-Hilfe-Kurs“ am Kind, welcher in 
+                der Betreuung unserer Tageskinder. Wir besuchten beide den &ldquo;Erste-Hilfe-Kurs&bdquo; am Kind, welcher in 
                 regelmäßigen Abständen wiederholt wird. Weitere Informationen zu unseren Qualifizierungen finden Sie 
                 jeweils auf der rechten Seite zum Anklicken.");
     echo $p;
@@ -65,8 +65,7 @@
     echo $model->FirstLetter("Seit meiner Kindheit bin ich musikalisch aktiv: Ich spielte zunächst Mandoline und begann als 
         Teenager mit der Gitarre. Heute bin ich Mitglied einer Band und spiele dort dieses Instrument noch immer. 
         Meine Liebe zur Musik möchte ich weitergeben und gemeinsam mit den Kindern auf musikalische Entdeckungsreise gehen.");
-    echo $p; 
-    
+    echo $p;     
     echo $model->FirstLetter("Sie möchten mehr über uns und unsere Arbeit erfahren? Wir freuen uns sehr über Ihre " .
             $model->Link(Constans::PAGE_KONTAKT . Constans::PHP, "Kontaktaufnahme") . ".");
     ?> 

@@ -19,7 +19,7 @@
      </div>
     
         <br>
-    <h2>Olga Böhm</h2>
+    <h2><?php echo $model->Umlaute("Olga Böhm")?></h2>
     <p>
         <img class="icon" src="<?php echo Constans::ICON_PATCH ?>check.png" alt="check" style="width: 16px;">
         <span id="about_allgemein_olga" class="navi"><?php echo $model->Umlaute("Über mich") ?></span><br>
@@ -39,7 +39,7 @@
         <a href="<?php echo Constans::PDF_PATCH ?>olga/erste_hilfe_kurs.pdf" target="_blank">Erste-Hilfe am Kind</a><br> 
     </p>
     
-    <h2>Hermann Böhm</h2>
+    <h2><?php echo $model->Umlaute("Hermann Böhm")?></h2>
     <p>
         <img class="icon" src="<?php echo Constans::ICON_PATCH ?>check.png" alt="check" style="width: 16px;">
         <span id="about_allgemein_hermann" class="navi"><?php echo $model->Umlaute("Über mich") ?></span><br>
