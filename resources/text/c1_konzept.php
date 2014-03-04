@@ -1,121 +1,111 @@
+<?php $p = "<p>"; ?>
 <div class="article_text c1" id="text_vorwort">
-    <p>
-        <span class="firstLetter"><span>D</span></span><span>ieses Konzept ist eine Dokumentation meiner Arbeit und wurde von mir erstellt. 
-            Es darf nicht als ein unver&auml;nderlicher Plan gesehen werden, sondern als ein Konzept, welches lebt und sich weiterentwickelt. 
-            Das Konzept dient als eine Art Visitenkarte f&uuml;r Eltern und Interessenten, die meine Kinderbetreuung 
-            in Anspruch nehmen m&ouml;chten.
-        </span>
-    </p>
+    <?php
+    echo $p;
+    echo $model->FirstLetter("Dieses Konzept ist eine Dokumentation unserer Arbeit und wurde von uns persönlich erstellt. 
+        Bitte sehen Sie es nicht als unveränderlichen Plan, sondern als ein Konzept, welches lebt und sich jederzeit 
+        weiterentwickelt. Es ist lediglich als eine Art Visitenkarte für Eltern und Interessenten zu sehen, die unsere 
+        Kinderbetreuung in Anspruch nehmen möchten. So können Sie sich einen kleinen Eindruck über unsere Arbeit verschaffen. 
+        Offene Fragen beantworten wir Ihnen sehr gern in einem persönlichen Gespräch.");
+    ?>
 </div>
 
 <div class="article_text c1" id="text_rahmenbedingungen">
-    <p>
-        <span class="firstLetter"><span>D</span></span><span>ie Kinderbetreuung findet in einer Doppelhaush&auml;lfte (Eigentum) statt. 
-            Das Haus ist ca.160 qm2 gro&szlig und bietet ausreichend Raum zum Spielen und Toben, aber auch zum Ausruhen. 
-        </span>
-        </p>
-        <div class="leerzeile"></div>
-        <p>
-        <span class="firstLetter"><span>U</span></span><span>nser Haus verteilt sich auf 2 Stockwerke. Im Erdgeschoss befindet sich 
-            ein weitr&auml;umiges, helles Wohnzimmer, 
-            das f&uuml;r unterschiedliche Aktivit&auml;ten genutzt wird. Aus dem Wohnzimmer gelangt man auf eine Terrasse und 
-            einen gro&szligfl&auml;chig angelegten Garten.
-        </span>
-        </p>
-        <div class="leerzeile"></div>
-        <p>
-        <span class="firstLetter"><span>D</span></span><span>
-            er Garten ist &laquo;umz&auml;unt&raquo; mit B&uuml;schen, die eine Hecke bilden sowie einem Zaun zum Nachbarsgrundst&uuml;ck. 
-            Der Garten grenzt an einen sog. &laquo;Pocketpark&raquo;, keine Stra&szlige. Hier kann insbesondere bei warmem Wetter nach Lust und 
-            Laune getobt werden. Neben einer gro&szligen Rasenfl&auml;che gibt es im Garten einen Sandkasten, zwei Schaukeln, 
-            ein Spielhaus sowie verschiedene Fahrzeuge und ein H&auml;uschen mit zwei Zwergkaninchen. Im 1. OG befinden sich 
-            2 Kinderzimmer - in einem davon steht ein Reisebett. In einem weiteren Raum steht ein Kinderbett, 
-            wo die Kinder ein Schl&auml;fchen machen k&ouml;nnen. 
-        </span>
-        </p>
-        <div class="leerzeile"></div>
-        <p>
-        <span class="firstLetter"><span>S</span></span><span>
-            ie k&ouml;nnen  <a class="various fancybox.iframe" href="<?php echo Constans::GOOGLEMAP ?>">die Tagespflegestelle</a> gut erreichen, eine Bushaltestelle befindet sich in unmittelbarer N&auml;he. 
-            <a href="<?php echo Constans::PAGE_LAGE . Constans::PHP ?>">Erfahren Sie mehr &uuml;ber die Lage</a>.                                     
-        </span>
-    </p>
+    <?php
+    echo $p;
+    echo $model->FirstLetter("Die Betreuung unserer Tageskinder findet in einer Doppelhaushälfte (Eigentum) statt. 
+        Wir verfügen hier über etwa 160 qm, die ausreichend Raum zum Spielen und Toben, aber auch zum Ausruhen bieten.");
+    echo $p;
+    echo $model->FirstLetter("Unser Haus verteilt sich auf 2 Stockwerke. Im Erdgeschoss befindet sich das weiträumige, 
+        helle Wohnzimmer, welches wir für die unterschiedlichsten Aktivitäten nutzen. Direkt an das Wohnzimmer grenzen die große, 
+        liebevoll eingerichtete Terrasse und der großflächig angelegte Garten an. Hier lässt sich besonders gut spielen und toben. 
+        Deswegen verlegen wir bei gutem Wetter sämtliche Aktivitäten nach draußen.");
+    echo $p;
+    echo $model->FirstLetter("Der Garten ist von Büschen &ldquo;umzäunt&bdquo;, die eine Hecke bilden. 
+        Die Nachbarsgrundstücke sind durch entsprechende Zäune von unserem Grundstück getrennt. 
+        Unser Garten liegt an einem sogenannten &ldquo;Pocketpark&bdquo;. D. h., es besteht keine Gefahr durch eine angrenzende 
+        Hauptstraße. Er ist übersichtlich gestaltet, sodass wir unsere Tageskinder jederzeit gut im Blick haben. 
+        Neben der großen, gepflegten Rasenfläche finden die Kinder hier einen abdeckbaren Sandkasten mit einer Vielzahl an 
+        Schaufeln und Förmchen, zwei Schaukeln für Groß und Klein, ein Spielhaus und die verschiedensten Fahrzeuge für alle 
+        Altersstufen.");
+    echo $p;
+    echo $model->FirstLetter("Im 1. OG haben wir mehrere Schlafgelegenheiten eingerichtet. 
+        Hier stehen mehrere Kinderbetten für den Mittagsschlaf oder ein Schläfchen zwischendurch bereit.");
+    echo $p;
+    echo $model->FirstLetter("Unsere <a class='various fancybox.iframe' href='" . Constans::GOOGLEMAP . "'>Tagespflegestelle</a> 
+        ist sehr gut erreichbar. Direkt im &ldquo;Pocketpark&bdquo; stehen Ihnen viele Parkplätze zur Verfügung und in 
+        unmittelbarer Nähe befindet sich eine Bushaltestelle (z. B. in der Robert-Koch-Straße).");
+    ?>
 </div>
 
 <div class="article_text c1" id="text_auf_zu">
-    <p>
-        <span class="firstLetter"><span>I</span></span><span>ch biete Ihnen verschiedene Betreuungsformen an:
-            <br/>
-            Grunds&auml;tzlich stehe ich montags bis freitags ab 7.00 Uhr zur Verf&uuml;gung. Die Uhrzeit der Abholung erfolgt nach Absprache. 
-            W&auml;hrend der Betreuung k&ouml;nnen bis zu 5 Kinder gleichzeitig betreut werden.
-            Alle Vereinbarungen werden mit den Eltern entsprechend der sogenannten &laquo;Betreuungsvereinbarung zur Kindertagespflege&raquo;
-            schriftlich festgehalten .
-            Die Tagespflegestelle ist an Samstagen, Sonn- und gesetzlichen Feiertagen ganzt&auml;gig geschlossen.
-        </span>
-    </p>
+    <?php
+    echo $p;
+    echo $model->FirstLetter("Wir bieten Ihnen verschiedene, ganz individuell auf Ihre Bedürfnisse abgestimmte, 
+            Betreuungsformen an. Von Montag bis Freitag stehen wir Ihnen schon ab 7:00 Uhr zur Verfügung. Die genaue 
+            Uhrzeit der Abgabe und der Abholung Ihres Kindes legen wir gemeinsam im persönlichen Gespräch fest. 
+            Wir betreuen maximal 5 Kinder gleichzeitig. Alle getroffenen Vereinbarungen halten wir in einer sogenannten 
+            &ldquo;Betreuungsvereinbarung zur Kindertagespflege&bdquo; schriftlich fest. Unsere Tagespflegestelle ist an Samstagen, 
+            Sonn- und gesetzlichen Feiertagen geschlossen. Wir bieten Ihnen auch die Möglichkeit eines Bring- und Abholservices 
+            für Ihr Kind an. Dies ist uns aufgrund des Vorhandenseins der benötigten Ausstattung möglich. 
+            Bei Interesse sprechen Sie uns bitte darauf an, sodass wir mit Ihnen die finanziellen Einzelheiten 
+            dazu besprechen können.");
+    ?>
 </div>
 
-<div class="article_text c1" id="text_ziele">
-    <p>
-        <span class="firstLetter"><span>M</span></span><span>ein gr&ouml;&szlig;tes Ziel ist es, dass sich die Kinder bei mir und meiner 
-            Familie wohl f&uuml;hlen, sich entsprechend ihren F&auml;higkeiten entfalten k&ouml;nnen und gerne wiederkommen. 
-        </span>
-        </p>
-        <div class="leerzeile"></div>
-        <p>
-                        </p>
-        <br>
-        <p>
-        <span class="firstLetter"><span>I</span></span><span>m Rahmen meiner Arbeit als Tagesmutter m&ouml;chte ich folgende F&auml;higkeiten 
-            vermitteln: 
-            <br />
-            Achtung gegen&uuml;ber anderen<br>
-            Hilfsbereitschaft<br>
-            Ehrlichkeit<br>
-            Tischmanieren<br>
-            Offenheit f&uuml;r Neues<br>
-            Verantwortungsbewusstsein<br>
-            Zuverl&auml;ssiges Handeln<br>
-            <b>Selbstst&auml;ndigkeit</b>: 
-        </span>
-    </p>
+<div class="article_text c1" id="text_ziele">    
+    <?php
+    echo $p;
+    echo $model->FirstLetter("Unser größtes Ziel ist es, dass sich die Kinder bei uns und unserer Familie wohlfühlen, 
+            sich entsprechend ihren Fähigkeiten entfalten können und gerne wiederkommen. 
+            <br/>Im Rahmen unserer Arbeit als 
+            Tagespflegepersonen möchten wir folgende Fähigkeiten vermitteln: 
+            <div style='margin:-11px 0 0 30px'>
+                <p><i class='fa fa-angle-double-right icon-botton'></i> Achtung gegenüber anderen 
+                <br><i class='fa fa-angle-double-right icon-botton'></i> Hilfsbereitschaft
+                <br><i class='fa fa-angle-double-right icon-botton'></i> Ehrlichkeit 
+                <br/><i class='fa fa-angle-double-right icon-botton'></i> Tischmanieren
+                <br/><i class='fa fa-angle-double-right icon-botton'></i> Offenheit für Neues
+                <br/><i class='fa fa-angle-double-right icon-botton'></i> Verantwortungsbewusstsein
+                <br/><i class='fa fa-angle-double-right icon-botton'></i> Zuverlässiges Handeln
+                <br/><i class='fa fa-angle-double-right icon-botton'></i> <b>Selbstständigkeit</b>
+            </div>
+");
+    echo $p;
+    echo $model->FirstLetter("Unsere Tagespflegekinder fühlen sich in der warmen, 
+            familiären Atmosphäre geborgen. Sie erweitern hier ihre sozialen Kompetenzen im Leben in der Gemeinschaft. 
+            Sie erleben im gemeinsamen Alltag den Umgang mit anderen, das Teilen, das Warten, das Rücksichtnehmen, 
+            das Helfen und sie lernen, sich helfen zu lassen. Sie lernen voneinander und miteinander, sie lernen, 
+            einander zuzuhören und sich mitzuteilen. Sie erleben Grenzen und gewinnen dadurch Sicherheit im Leben. ");
+    ?>
 
-    <blockquote>
-        <p>
-            Selbstst&auml;ndigkeit ist f&uuml;r die fr&uuml;hkindliche Entwicklung von gro&szlig;er Bedeutung, denn in dieser Phase entdeckt das  Kind die Welt f&uuml;r sich. 
-            Selbstst&auml;ndigkeit bedeutet vor diesem Hintergrund, dass Kinder selber laufen m&ouml;chten, sich selbst an- oder ausziehen, sich 
-            selbst ihr essen nehmen und entscheiden k&ouml;nnen, mit wem oder was sie spielen m&ouml;chten.
-        </p>
-    </blockquote>
-    <p>
-        <br/>
-        <span class="firstLetter"><span>D</span></span><span>ie Kinder
-            f&uuml;hlen sich in der warmen Atmosph&auml;re geborgen,
-            erweitern ihre soziale Kompetenz im Leben in der Gemeinschaft,
-            erleben im gemeinsamen Alltag den Umgag mit Anderen, das Teilen, das Warten, das R&uuml;cksichtnehmen, das Helfen und lernen, sich helfen zu lassen,
-            lernen voneinander und miteinander,
-            lernen einander zuzuh&ouml;ren und sich mitzuteilen,
-            erleben Grenzen und gewinnen dadurch Sicherheit im Leben. 
-        </span>
-    </p>
+    <!--  
+    
+        <blockquote>
+            <p>
+                Selbstst&auml;ndigkeit ist f&uuml;r die fr&uuml;hkindliche Entwicklung von gro&szlig;er Bedeutung, denn in dieser Phase entdeckt das  Kind die Welt f&uuml;r sich. 
+                Selbstst&auml;ndigkeit bedeutet vor diesem Hintergrund, dass Kinder selber laufen m&ouml;chten, sich selbst an- oder ausziehen, sich 
+                selbst ihr essen nehmen und entscheiden k&ouml;nnen, mit wem oder was sie spielen m&ouml;chten.
+            </p>
+        </blockquote>
+    -->
 </div>
-
 <div class="article_text c1" id="text_schwerpunkte">
-    <p>
-        <span class="firstLetter"><span>E</span></span><span>in Schwerpunkt meiner p&auml;dagogischen Arbeit umfasst die Pflege. 
-            <b>Pflegerische T&auml;tigkeiten</b> nehmen besonders  bei Kleinkindern einen hohen Stellewert ein. 
-            Sie sind wichtig f&uuml;r das k&ouml;rperliche und seelische Wohlbefinden. Soziale Kontakte werden zun&auml;chst &uuml;ber diese 
-            Ma&szlig;nahmen gekn&uuml;pft: K&ouml;rperpflege, Schlafbed&uuml;rfnisse, auch das Einnehmen von Mahlzeiten nimmt  im Tagesablauf viel Zeit ein.
-        </span>
-       </p>
-        <div class="leerzeile"></div>
-        <p>
-        <span class="firstLetter"><span>E</span></span><span>in weiterer Schwerpunkt ist die <b>p&auml;dagogische Komponente</b>. 
-            Sie bezieht sich auf die  individuellen Entwicklungsschritte des Kindes, weshalb die Betreuung dem 
-            p&auml;dagogischen Anspruch der Kindererziehung gerecht wird. Das verwirkliche ich, indem ich mit dem Kind die 
-            f&uuml;r den jeweiligen Entwicklungsstand relevanten T&auml;tigkeiten durchf&uuml;hre. 
-            Die p&auml;dagogische Arbeit beinhaltet vier Bereiche:
-        </span>
+    <?php
+    echo $p;
+    echo $model->FirstLetter("Die Pflege Ihres Kindes ist nur ein Schwerpunkt unserer pädagogischen Arbeit. 
+            Besonders bei Kleinkindern nehmen <strong>pflegerische Tätigkeiten</strong> einen hohen Stellenwert ein. 
+            Sie sind sowohl für das körperliche wie auch für das seelische Wohlbefinden wichtig. 
+            Soziale Kontakte werden zunächst über diese Maßnahmen geknüpft: Körperpflege, Schlafbedürfnisse, 
+            auch das Einnehmen von Mahlzeiten nehmen im Tagesablauf viel Zeit ein.");
+    echo $p;
+    echo $model->FirstLetter("Ein weiterer Schwerpunkt ist die <strong>pädagogische Komponente</strong>. 
+            Sie bezieht sich auf die individuellen Entwicklungsschritte Ihres Kindes, weshalb die Betreuung dem 
+            pädagogischen Anspruch der Kindererziehung gerecht wird. Das verwirklichen wir, indem wir mit Ihrem Kind
+            die für den jeweiligen Entwicklungsstand relevanten Tätigkeiten durchführen. <br>
+            Die pädagogische Arbeit beinhaltet vier Bereiche:");
+    ?>
+
     <div style="width: 480px">
         <div class="line-oben row-l">
             <p style="font-size: 19px;">Sozialer Bereich</p>
@@ -169,64 +159,68 @@
 </p>
 </div>
 
-<div class="article_text c1" id="text_spiele">
-    <p>
-        <span class="firstLetter"><span>D</span></span><span>as Spiel ist die Hauptt&auml;tigkeit im Vorschulalter und somit eine der 
-            wichtigsten Aktivit&auml;ten f&uuml;r Kinder. Es gliedert sich in das <strong>Spielen im Freien</strong> und das <b>Spielen in den R&auml;umen</b>, 
-            in das Alleinspiel, aber zunehmend mit dem &auml;lterwerden auch in das <strong>Spiel mit anderen Kindern</strong>. 
-        </span>
-        </p>
-        <div class="leerzeile"></div>
-        <p>
-        <span class="firstLetter"><span>Z</span></span><span>ur F&ouml;rderung einer gesunden Entwicklung bietet mein Betreuungsangebot 
-            folgende <b>Spielarten</b>, die f&uuml;r die Kinder von gro&szlig;er Bedeutung sind: Rollenspiele - didaktische Spiele - Steck- , 
-            Greif- und Puppenspiele - Bau- und Konstruktionsspiele - Gesellschaftsspiele - Kreis-Lauf-Tanz-Ballspiele sowie Regelspiele.
-        </span>
-        </p>
-        <div class="leerzeile"></div>
-        <p>
-        <span class="firstLetter"><span>D</span></span><span>es Weiteren bietet die Tagesbetreuung dem Kind die M&ouml;glichkeit, 
-            seine <b>Fein- und Grobmotorik</b> zu entwickeln. Durch den t&auml;glichen Aufenthalt im Freien mit Freispielen soll 
-            dies gef&ouml;rdert werden. Die Entwicklung des Kindes ist ein Prozess, in dem die Bewegung eine ganz wichtige Bedeutung einnimmt. 
-            Dadurch lernt das Kind sich selbst und seine k&ouml;rperlichen F&auml;higkeiten kennen - ganz nach dem Motto &laquo;Bewegung macht schlau!&raquo;.
-        </span>
-        </p>
-        <div class="leerzeile"></div>
-        <p>
-        <span class="firstLetter"><span>D</span></span><span>ie <strong>grobmotorische Entwicklung</strong> wird insbesondere durch T&auml;tigkeiten im 
-            Garten gef&ouml;rdert, z. B. durch Ballspiele, Sandspiele, Drachen steigen lassen,  Bobby-Car fahren usw. 
-            Das Spielen auf Spielpl&auml;tzen, Ausfl&uuml;ge in die Stadt, sowie H&uuml;pfball, Trampolin springen oder das Planschen 
-            im Planschbecken geh&ouml;ren dazu.
-        </span>
-        </p>
-        <div class="leerzeile"></div>
-        <p>
-        <span class="firstLetter"><span>F</span></span><span>&uuml;r die <b>feinmotorische Entwicklung</b> werden T&auml;tigkeiten wie Basteln, 
-            Malen, Kneten, verschiedene Fingerspiele usw. durchgef&uuml;hrt.
-            Insgesamt wird das Kind durch alle Aktivit&auml;ten hindurch dazu animiert, selbstst&auml;ndig zu denken, 
-            eigene Ideen zu entwickeln, sowie sich mit neuen Sachverhalten auseinander zu setzen. Originelle 
-            Ideen sollen mit dem Kind verwirklicht werden und durch den Mut zum Experimentieren soll das 
-            Kind ein positives Lebensgef&uuml;hl entwickeln.
-        </span>
-        </p>
-        <div class="leerzeile"></div>
-        <p>
-        <span class="firstLetter"><span>D</span></span><span>ie Spielangebote richten sich nach dem Alter, 
-            den Interessen und den Bed&uuml;rfnissen des Kindes: Das Kind kann sich das Spielzeug, die Spielform, 
-            die Dauer und den Spielpartner selbst aussuchen.
-
-        </span>
-    </p>
+<div class="article_text c1" id="text_eingewoehnung">
+    <?php
+    echo $p;
+    echo $model->FirstLetter("Zum ersten Mal bewegt sich Ihr Kind in einer völlig fremden Umgebung und statt der gewohnten 
+        Familienmitglieder hat es mit neuen und zunächst unbekannten Gesichtern zu tun.");
+    echo $p;
+    echo $model->FirstLetter("Zu seiner neuen Bezugsperson muss Ihr Kind erst allmählich Vertrauen gewinnen. 
+        Eingewöhnung ist deshalb ein Prozess: Die Aufnahme Ihres Kindes erfordert daher ein sanftes Vorgehen und viele
+        Absprachen zwischen Ihnen als Eltern und uns als Tagespflegepersonen. Von der Gestaltung des Übergangs aus der 
+        Familie in die Tagespflegestätte hängt entscheidend ab, ob Ihr Kind sich gut einlebt. So kann sich auch zwischen Ihnen 
+        und uns eine vertrauensvolle Zusammenarbeit entwickeln. ");
+    echo $p;
+    echo $model->FirstLetter("Von der Eingewöhnungszeit hängt es ab, ob sich Ihr Kind auf Dauer bei uns wohlfühlt und stressfrei, 
+        ohne Angst, kommen und BLEIBEN kann. Hier nehmen wir besonders Rücksicht auf Ihr Kind. Die Eingewöhnung verläuft behutsam, 
+        wir lassen Ihrem Kind Zeit, Vertrauen zu uns, zu den neuen Räumlichkeiten und in den neuen Tagesablauf, aufzubauen.");
+    echo $p;
+    echo $model->FirstLetter("Der Eingewöhnungsprozess ist grundsätzlich dann abgeschlossen, wenn Ihr Kind uns, 
+        also die Tagespflegepersonen, als &ldquo;sichere Basis&bdquo; akzeptiert hat und sich von uns trösten lässt. ");
+    ?>
 </div>
 
-<div class="article_text c1" id="text_tag">
-    <p>
-        <span class="firstLetter"><span>D</span></span><span>er Tagesablauf ist nicht als Stundenplan zu verstehen. 
-            Jedoch helfen die t&auml;glich wiederkehrenden und festen Zeiten den Kindern sich zu orientieren. 
-            Feste Zeiten erm&ouml;glichen den Kindern, den Tagesablauf zu verstehen und diesen m&ouml;glichst selbstst&auml;ndig zu bew&auml;ltigen.
-        </span>
-    </p>
-    <div class="rows">
+<div class="article_text c1" id="text_spiele">
+    <?php
+    echo $p;
+    echo $model->FirstLetter("Das Spiel ist die Haupttätigkeit im Vorschulalter und somit eine der wichtigsten 
+        Aktivitäten für Ihr Kind. Es gliedert sich in das <strong>Spielen im Freien</strong> und das <strong>Spielen in den Räumen</strong>, 
+        in das <strong>Alleinspiel</strong> und zunehmend, mit dem Älterwerden, auch in das <strong>Spiel mit anderen Kindern</strong>.");
+    echo $p;
+    echo $model->FirstLetter("Zur Förderung einer gesunden Entwicklung bieten wir in unserem Betreuungsangebot folgende 
+        <strong>Spielarten</strong> an, 
+        die für Ihr Kind von großer Bedeutung sind: Rollenspiele, didaktische Spiele, Steck-, Greif- und Puppenspiele, 
+        Bau- und Konstruktionsspiele, Gesellschaftsspiele, Kreis-, Lauf-, Tanz- und Ballspiele, sowie Regelspiele.");
+    echo $p;
+    echo $model->FirstLetter("Des Weiteren bieten wir in unserer Tagesbetreuung Ihrem Kind die Möglichkeit, 
+        seine <strong>Fein- und Grobmotorik</strong> zu entwickeln. Durch den täglichen Aufenthalt im Freien mit Freispielen soll 
+        dies gefördert werden. Die Entwicklung Ihres Kindes ist ein Prozess, in dem die Bewegung eine ganz wichtige Rolle einnimmt. 
+        Dadurch lernt Ihr Kind sich selbst und seine körperlichen Fähigkeiten kennen – ganz nach dem Motto &ldquo;Bewegung macht schlau!&bdquo;");
+    echo $p;
+    echo $model->FirstLetter("Die <strong>grobmotorische Entwicklung</strong> fördern wir insbesondere durch Tätigkeiten im Garten, 
+        wie z. B. durch Ballspiele, Sandspiele, Drachen steigen lassen, Bobby-Car fahren usw. 
+        Das Spielen auf Spielplätzen, Ausflüge in die Stadt, Hüpfball, Trampolin springen oder das Planschen im Planschbecken 
+        gehören ebenfalls dazu.");
+    echo $p;
+    echo $model->FirstLetter("Für die <strong>feinmotorische Entwicklung</strong> führen wir Tätigkeiten wie z. B. Basteln, 
+        Malen, Kneten, verschiedene Fingerspiele usw. durch. Insgesamt wird Ihr Kind durch alle Aktivitäten hindurch dazu animiert, 
+        selbstständig zu denken, eigene Ideen zu entwickeln, sowie sich mit neuen Sachverhalten auseinanderzusetzen. 
+        Originelle Ideen sollen mit Ihrem Kind verwirklicht werden und durch den Mut zum Experimentieren soll 
+        Ihr Kind ein positives Lebensgefühl entwickeln.");
+    echo $p;
+    echo $model->FirstLetter("Die Spielangebote richten sich immer nach dem Alter, den Interessen und den Bedürfnissen Ihres Kindes. 
+        Es hat jederzeit die Freiheit, sich sein Spielzeug, die Spielform, die Dauer und den Spielpartner selbst auszusuchen. ");
+    ?>
+</div>
+
+<div class="article_text c1" id="text_tag">  
+    <?php
+    echo $p;
+    echo $model->FirstLetter("Der Tagesablauf ist nicht als fester Stundenplan anzusehen. 
+        Jedoch helfen die täglich wiederkehrenden und festen Zeiten unseren Tageskindern, sich zu orientieren. 
+        Feste Zeiten ermöglichen es ihnen, den Tagesablauf zu verstehen und diesen möglichst selbstständig zu bewältigen.");
+    ?>
+    <div class="rows" style="margin-bottom: 17px">
         <div class="table_left1">
             <p>09:00 - 09:30</p>
         </div>
@@ -243,7 +237,7 @@
             <p>11:00 - 12:00</p>
         </div>
         <div class="table_rigth1">
-            <p>Freispiel (ich bereite w&auml;hrenddessen das Mittagessen vor)</p>        
+            <p>Freispiel (wir bereiten w&auml;hrenddessen das Mittagessen vor)</p>        
         </div>
         <div class="table_left1">
             <p>12:00 - 13:00</p>
@@ -255,88 +249,52 @@
             <p>ab 13:00</p>
         </div>
         <div class="table_rigth1">
-            <p>Abholzeit</p>        
+            <p><?php echo $model->Umlaute("Schlafzeit mit anschließendem Freispiel, Spaziergängen usw. und Abholzeit"); ?></p>        
         </div>
-        <span>Die Schlafzeit richtet sich nach dem Alter und den Bed&uuml;rfnissen der Kinder.</span>
+        <span><?php echo $model->Umlaute("Die Schlafzeit richtet sich nach dem Alter und den Bedürfnissen Ihres Kindes."); ?> </span>
     </div>
-    <p>
-        <br/>
-        <span class="firstLetter"><span>I</span></span><span>ch bereite t&auml;glich  gesundes und hausgemachtes Essen zu. 
-            Bei der Auswahl der Zutaten achte ich auf Frische und gute Qualit&auml;t der Produkte. 
-            Auch beim Mittagessen m&ouml;chten kleine Kinder die Situation meist selber meistern. Sie eifern den &laquo;Gro&szlig;en&raquo; nach. 
-            Kinder versuchen oft schon sehr fr&uuml;h, Geschirr aufzustellen und sp&auml;ter wieder abzur&auml;umen. Geht mal etwas zu Bruch, 
-            ist das nicht schlimm, wir sind um eine Erfahrung reicher geworden.  Mit einem Jahr fangen die Kinder oft an selbst&auml;ndig zu essen. 
-            Dabei bauen &laquo;gelungene Aktivit&auml;ten&raquo; bereits in diesem fr&uuml;hen Stadium wichtiges Selbstvertrauen und Zuversicht auf.
-        </span>
-        </p>
-        <div class="leerzeile"></div>
-        <p>
-        <span class="firstLetter"><span>B</span></span><span>ei ganz kleinen Kindern bitte ich, Gl&auml;schen mitzubringen.
-            Zum Trinken wird angeboten: Apfelschorle, Tee, Milch, Wasser. Als Zwischenmahlzeit: Obst, Gem&uuml;se.
-
-        </span>
-    </p>
+    <?php
+    echo $p;
+    echo $model->FirstLetter("Wir bereiten täglich gesundes und hausgemachtes Essen zu. Bei der Auswahl der Zutaten achten 
+        wir auf Frische und gute Qualität der Produkte. Auch beim Mittagessen möchten kleine Kinder die Situation meist selber 
+        meistern. Sie eifern den „Großen“ nach. Kinder versuchen oft schon sehr früh, Geschirr aufzustellen und später wieder
+        abzuräumen. Geht mal etwas zu Bruch ist das nicht schlimm. Ihr Kind ist um eine Erfahrung reicher geworden. 
+        Mit einem Jahr fangen die Kinder oft an, selbstständig zu essen. Dabei bauen „gelungene Aktivitäten“ bereits in diesem
+        frühen Stadium wichtiges Selbstvertrauen und Zuversicht auf. ");
+    echo $p;
+    echo $model->FirstLetter("Bei ganz kleinen Kindern bitten wir Sie, Gläschen mitzubringen. Zum Trinken bieten wir Wasser, 
+        Apfelschorle, Tee und Milch an. Als Zwischenmahlzeit gibt es Obst und Gemüse. ");
+    ?>
 </div>
 
 <div class="article_text c1" id="text_eltern">
-    <p>
-        <span class="firstLetter"><span>D</span></span><span>er aktive Austausch mit den Eltern ist in der Kinderbetreuung sehr wichtig. F&uuml;r Elterngespr&auml;che bin ich deshalb immer offen. &laquo;T&uuml;r und Angelgespr&auml;che&laquo; sind jederzeit willkommen. Eine st&auml;ndige Kommunikation ist notwendig, um eine positive Arbeit im Interesse der Kinder, der Eltern und mir als Tagespflegeperson zu gestalten.
-Bei der &Uuml;bergabe zur Pflegeperson sollte ein kurzer Informationsaustausch zwischen Eltern und mir stattfinden. Gespr&auml;che sind wichtig, um auf die Bed&uuml;rfnisse des Kindes besonders eingehen zu k&ouml;nnen (z.B. bei Verletzungen, die sich das Kind zuvor zugezogen hat, bei ersten Krankheitsanzeichen, bei wenig Schlaf usw.)
-
-        </span>
-    </p>
+    <?php
+    echo $p;
+    echo $model->FirstLetter("Der aktive Austausch mit Ihnen, den Eltern, ist in der Kinderbetreuung sehr wichtig. 
+        Für Elterngespräche sind wir deshalb immer offen. „Tür- und Angelgespräche“ sind jederzeit willkommen. 
+        Eine ständige Kommunikation ist notwendig, um eine positive Arbeit im Interesse der Kinder, der Eltern und uns als 
+        Tagespflegepersonen zu gestalten. Bei der Übergabe Ihres Kindes an uns sollte ein kurzer Informationsaustausch zwischen 
+        Ihnen und uns stattfinden. Gespräche sind wichtig, um auf die Bedürfnisse Ihres Kindes besonders eingehen zu können 
+        (z. B. bei Verletzungen, die sich das Kind zuvor zugezogen hat, bei ersten Krankheitsanzeichen, bei wenig Schlaf usw.)");
+    ?>
 </div>
 
 <div class="article_text c1" id="text_institut">
-    <p>
-        <span class="firstLetter"><span>I</span></span><span>ch arbeite aktiv mit dem Jugendamt und anderen Tagesm&uuml;ttern zusammen und besuche regelm&auml;&szlig;ig den Tagesm&uuml;ttertreff. Im Austausch mit anderen Tagesm&uuml;ttern und dem Jugendamt werden wichtige Erfahrungen gesammelt und das Betreuungsangebot durch neue Anregungen und Ideen erweitert.
-Da meine Schw&auml;gerin, die in direkter Nachbarschaft wohnt, auch Tagesmutter ist, unternehmen wir oft gemeinsam Ausfl&uuml;ge. Es werden gemeinsam unterschiedliche Aktivit&auml;ten durchgef&uuml;hrt, so spielen die Kinder zum Beispiel oft gemeinsam im Garten, wir besuchen uns gegenseitig oder gehen gemeinsam spazieren. Die Kinder profitieren von dem zus&auml;tzlichen Kontakt zu anderen Kindern.
-
-        </span>
-    </p>
+    <?php
+    echo $p;
+    echo $model->FirstLetter("Wir arbeiten aktiv mit dem Jugendamt und anderen Tagespflegepersonen zusammen und besuchen 
+        regelmäßig den Verein &ldquo;Tagesmütter-Initiative Südpfalz e.V./ Verein für Eltern und Tageseltern e.V.&bdquo;. 
+        Im Austausch mit anderen Tagespflegepersonen und dem Jugendamt sammeln wir wichtige Erfahrungen und erweitern 
+        unser Betreuungsangebot durch neue Anregungen und Ideen. ");
+    ?>
 </div>
-
-<div class="article_text c1" id="text_eingewoehnung">
-    <p>
-        <span class="firstLetter"><span>Z</span></span><span>um ersten Mal bewegt sich das Kind in einer v&ouml;llig 
-            fremden Umgebung und statt der gewohnten heimischen Familienmitglieder hat es mit neuen und zun&auml;chst unbekannten 
-            Gesichtern zu tun.
-        </span>
-        </p>
-    <div class="leerzeile"></div>
-     <p>
-        <span class="firstLetter"><span>Z</span></span><span>u seiner neuen Bezugsperson muss das Kind erst allm&auml;hlich Vertrauen gewinnen. 
-            Eingew&ouml;hnung ist deshalb ein Prozess:  die Aufnahme eines Kindes erfordert daher ein sanftes 
-            Vorgehen und viele Absprachen zwischen Eltern und Tagespflegeperson. Von der Gestaltung des &Uuml;bergangs 
-            aus der Familie in die Tagespflegest&auml;tte h&auml;ngt entscheidend ab, ob das Kind sich gut einlebt. So kann sich auch 
-            zwischen Eltern und der Tagespflegeperson eine vertrauensvolle Zusammenarbeit entwickeln.
-            
-        </span>
-    </p>
-    <div class="leerzeile"></div>
-     <p>
-        <span class="firstLetter"><span>V</span></span><span>on der Eingew&ouml;hnungszeit h&auml;ngt es ab, ob sich das Kind auf
-            Dauer bei der Tagesmutter wohl f&uuml;hlt und stressfrei, ohne Angst kommen und BLEIBEN kann. 
-            Hier wird besondere R&uuml;cksicht auf das Kind genommen: Die Eingew&ouml;hnung verl&auml;uft behutsam, dem Kind wird Zeit gelassen, 
-            Vertrauen aufzubauen  zur  Tagesmutter, zu den neuen R&auml;umlichkeiten und den neuen Tagesablauf.
-            
-        </span>
-    </p>
-    <div class="leerzeile"></div>
-     <p>
-        <span class="firstLetter"><span>D</span></span><span>er Eingew&ouml;hnungsprozess ist grunds&auml;tzlich dann abgeschlossen, 
-            wenn das Kind die Tagesmutter als &laquo;sichere Basis&raquo; akzeptiert hat und sich von ihr tr&ouml;sten l&auml;sst.
-            
-        </span>
-    </p>
-</div>
-
 
 <div class="article_text c1" id="text_bezahlung">
-    <p>
-        <span class="firstLetter"><span>D</span></span><span>as Jugendamt &uuml;bernimmt einen Teil der Betreuungskosten, einen weiteren Teil der Kosten stelle ich den Eltern in Rechnung. Dieser Betrag kann bei der Steuererkl&auml;rung geltend gemacht werden. 
-Die Kosten f&uuml;r den Betreuungsplatz richten sich nach der Tabelle und h&auml;ngen von der Stundenzahl pro Woche ab. Beim pers&ouml;nlichen Gespr&auml;ch erfahren sie Genaueres. 
-
-        </span>
-    </p>
+    <?php
+    echo $p;
+    echo $model->FirstLetter("Das Jugendamt übernimmt einen Teil der Betreuungskosten, einen weiteren Teil der Kosten 
+        stellen wir Ihnen in Rechnung. Sie haben die Möglichkeit, diesen Betrag bei der Steuererklärung geltend zu machen. 
+        Die Kosten für den Betreuungsplatz richten sich nach der Tabelle und hängen von der Stundenzahl pro Woche ab. 
+        In einem persönlichen Gespräch erfahren sie hierzu Genaueres.");
+    ?>
 </div>

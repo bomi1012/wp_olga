@@ -78,7 +78,7 @@ Ersetzen Sie das Zeichen ß durch die Zeichenfolge &szlig;
     const KW_VORWORT = "Vorwort";
     const KW_RAHMENBEDINGUNGEN = "Rahmenbedingungen";
     const KW_AUF_ZU = "&Ouml;ffnungs- und Schlie&szlig;zeiten";
-    const KW_ZIELE = "Meine Ziele";
+    const KW_ZIELE = "Unsere Ziele";
     const KW_SCHWERPUNKTE = "P&auml;dagogische Schwerpunkte";
     const KW_SPIELE = "Spiele und sonstige Aktivit&auml;ten";
     const KW_TAG_MITTAGESSEN = "Tagesablauf und Mittagessen";

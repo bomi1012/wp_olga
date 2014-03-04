@@ -34,7 +34,7 @@
         rahmenbedingungenDiv = "rahmenbedingungen";
         auf_zu = "&Ouml;ffnungs- und Schlie&szlig;zeiten";
         auf_zuDiv = "auf_zu";
-        ziele = "Meine Ziele";
+        ziele = "Unsere Ziele";
         zieleDiv = "ziele";
         schwerpunkte = "P&auml;dagogische Schwerpunkte";
         schwerpunkteDiv = "schwerpunkte";
