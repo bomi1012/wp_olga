@@ -68,8 +68,8 @@
                 <br/><i class='fa fa-angle-double-right icon-botton'></i> Offenheit für Neues
                 <br/><i class='fa fa-angle-double-right icon-botton'></i> Verantwortungsbewusstsein
                 <br/><i class='fa fa-angle-double-right icon-botton'></i> Zuverlässiges Handeln
-                <br/><i class='fa fa-angle-double-right icon-botton'></i> <b>Selbstständigkeit</b>
-            </div>
+                <br/><i class='fa fa-angle-double-right icon-botton'></i> Selbstständigkeit
+            </div>Selbst
 ");
     echo $p;
     echo $model->FirstLetter("Unsere Tagespflegekinder fühlen sich in der warmen, 

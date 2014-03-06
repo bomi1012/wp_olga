@@ -54,13 +54,13 @@
         Neben dem &ldquo;Qualifizierungslehrgang für Tagesmütter und Tagesväter&bdquo; absolvierte ich im September 2013 erfolgreich die 
         Fortbildung in Lebensmittelhygiene und besitze, wie eingangs bereits erwähnt, eine Pflegeerlaubnis und bin beim Jugendamt 
         Landau als Tagespflegeperson gemeldet.");
-    echo $p;
-       echo $model->FirstLetter("Neben dem Freispiel bieten wir den Kindern verschiedene Lernangebote wie z. B. Kneten, Malen, 
-           Ball- und Bewegungsspiele sowie Fingerspiele an. Meinen Schwerpunkt lege ich persönlich auf die musikalische Frühförderung.");
-    echo $p; 
-    echo $model->FirstLetter("Musik eröffnet Kindern die Welt der Sprache und ist ein Teil ihrer Erlebniswelt. 
-        Sie haben Freude daran, Geräuschen und Klängen zu lauschen, diese selbst zu produzieren, sowie Klangeigenschaften 
-        von Materialien zu erforschen. Gefühle können durch Musik zum Ausdruck gebracht und emotionale Belastungen abgebaut werden. ");
+//    echo $p;
+//       echo $model->FirstLetter("Neben dem Freispiel bieten wir den Kindern verschiedene Lernangebote wie z. B. Kneten, Malen, 
+//           Ball- und Bewegungsspiele sowie Fingerspiele an. Meinen Schwerpunkt lege ich persönlich auf die musikalische Frühförderung.");
+//    echo $p; 
+//    echo $model->FirstLetter("Musik eröffnet Kindern die Welt der Sprache und ist ein Teil ihrer Erlebniswelt. 
+//        Sie haben Freude daran, Geräuschen und Klängen zu lauschen, diese selbst zu produzieren, sowie Klangeigenschaften 
+//        von Materialien zu erforschen. Gefühle können durch Musik zum Ausdruck gebracht und emotionale Belastungen abgebaut werden. ");
     echo $p; 
     echo $model->FirstLetter("Seit meiner Kindheit bin ich musikalisch aktiv: Ich spielte zunächst Mandoline und begann als 
         Teenager mit der Gitarre. Heute bin ich Mitglied einer Band und spiele dort dieses Instrument noch immer. 
