@@ -10,11 +10,11 @@
    </div>
     
     <div id="photo_hermann">
-         <a title="Ich und meine Kinder (Gabriel und Evelin)" class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_2b.jpg">
-        <img class="curved" src="<?php echo Constans::IMAGE_PATCH ?>tm_photo_2a.jpg" alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>"></a>
+         <a title="Ich und meine Kinder (Gabriel und Evelin)" class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_3b.jpg">
+        <img class="curved" src="<?php echo Constans::IMAGE_PATCH ?>tm_photo_3a.jpg" alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>"></a>
  
-    <a title="Ich bin <?php echo Constans::KW_NAME ?>" class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_1b.jpg">
-        <img class="curved" src="<?php echo Constans::IMAGE_PATCH ?>tm_photo_1a.jpg" alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>"></a>
+    <a title="Ich bin <?php echo Constans::KW_NAME ?>" class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_4b.jpg">
+        <img class="curved" src="<?php echo Constans::IMAGE_PATCH ?>tm_photo_4a.jpg" alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>"></a>
 
      </div>
     
@@ -43,8 +43,8 @@
     <p>
         <img class="icon" src="<?php echo Constans::ICON_PATCH ?>check.png" alt="check" style="width: 16px;">
         <span id="about_allgemein_hermann" class="navi"><?php echo $model->Umlaute("Über mich") ?></span><br>
-<!--        <img class="icon" src="<?php echo Constans::ICON_PATCH ?>check.png" alt="check" style="width: 16px;">
-        <span id="about_erfahrung_hermann" class="navi">Meine Erfahrung</span><br>   -->
+        <img class="icon" src="<?php echo Constans::ICON_PATCH ?>check.png" alt="check" style="width: 16px;">
+        <span id="about_erfahrung_hermann" class="navi">Meine Erfahrung</span><br>  
     </p>
  <h5 class="margin_h">Downloads:</h5>
     <p>

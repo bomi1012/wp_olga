@@ -129,3 +129,23 @@
         </div>
     </div>
 </div>
+
+
+<div class="article_text c1" id="text_erfahrung_hermann">
+    <div class="rows">
+        <div class="table_left">
+            <p>2012</p>
+        </div>
+        <div class="table_rigth">
+            <p><?php echo $model->Umlaute("Teilnahme am Aufbauqualifizierungskurs für Tagesmütter und Vätter"); ?></p>        
+        </div>
+    </div>
+    <div class="rows">
+        <div class="table_left">
+            <p>November 2012</p>
+        </div>
+        <div class="table_rigth">
+            <p>&laquo;Erste-Hilfe-Kurs&raquo; am Kind</p>        
+        </div>
+    </div>
+</div>
