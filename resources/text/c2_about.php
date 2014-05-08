@@ -18,7 +18,7 @@
 
      </div>
     
-        <br>
+        <br />
     <h2><?php echo $model->Umlaute("Olga Böhm")?></h2>
     <p>
         <img class="icon" src="<?php echo Constans::ICON_PATCH ?>check.png" alt="check" style="width: 16px;">

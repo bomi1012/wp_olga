@@ -1,4 +1,17 @@
 <div class="article_text">
+    
+     <br />    
+<div id="photo_olga">
+    <a class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_1b.jpg">
+        <img class="curved" src="<?php echo Constans::IMAGE_PATCH ?>tm_photo_1a.jpg" 
+             alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
+    </a>
+
+    <a title="Ich und meine Kinder (Gabriel und Evelin)" class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_2b.jpg">
+        <img class="curved" src="<?php echo Constans::IMAGE_PATCH ?>tm_photo_2a.jpg" alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>"></a>
+   </div>
+ <br />
+    
     <h2 class="non-top-h2"><?php echo Constans::CONCEPT ?>:</h2>
     <p>
         <img class="icon" src="<?php echo Constans::ICON_PATCH ?>check.png" alt="check" style="width: 16px;">
