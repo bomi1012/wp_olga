@@ -32,6 +32,7 @@ set_error_handler("customError");
 @include 'seiten/class_GastBook_Service.php';
 @include 'seiten/class_GastBook_Model.php';
 @include 'seiten/class_Adminarea.php';
-@include 'seiten/class_Album.php';
+@include 'seiten/AlbumManagerClass.php';
+@include 'seiten/AlbumEntityClass.php';
 @include 'seiten/class_Logging.php';
 ?>

@@ -1,15 +1,20 @@
 <?php
-$album = new Album(Constans::ALBUM_PATCH, 'konzept');
-$album->randomTwoImages();
+$album = new AlbumManager(Constans::ALBUM_PATCH, 'konzept');
+$album->randomImages(2);
 ?>
 
 <div class="article_text">
     <br />    
     <div id="photo_konzept">
-        <?php foreach ($album->get_random_dic() as $min => $big) { 
-            ?>
-            <a title="" class="fancybox" rel="group" href="<?php echo $album->get_dir(); ?>/<?php echo $big ?>">
-                <img class="curved" src="<?php echo $album->get_dir(); ?>/<?php echo $min ?>" alt="Photo"></a>
+        <?php foreach ($album->getRandomImages() as $min => $big) {  ?>
+            <a 
+                class="fancybox" 
+                rel="group" 
+                href="<?php echo $album->getAlbum()->getDir() ?>/<?php echo $big ?>">
+                <img 
+                    class="curved" 
+                    src="<?php echo $album->getAlbum()->getDir() ?>/<?php echo $min ?>" 
+                    alt="Photo"></a>
         <?php } ?>
     </div>
     <br />
