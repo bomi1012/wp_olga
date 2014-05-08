@@ -6,6 +6,7 @@ class Album {
     private $_path;
     private $_ordner;
     private $_dic;
+    private $_random_dic;
 
     public function get_dir() {
         return $this->_dir;
@@ -21,6 +22,10 @@ class Album {
 
     public function get_dic() {
         return $this->_dic;
+    }
+
+    public function get_random_dic() {
+        return $this->_random_dic;
     }
 
     /**
@@ -71,6 +76,13 @@ class Album {
                 }
             }
         }
+    }
+
+    public function randomTwoImages() {
+        $this->_random_dic = array();            
+        $rand_keys = array_rand($this->_dic, 2);
+        $this->_random_dic[$rand_keys[0]] = $this->_dic[$rand_keys[0]];
+        $this->_random_dic[$rand_keys[1]] = $this->_dic[$rand_keys[1]];
     }
 
     private function contains($str, $content, $ignorecase = true) {
