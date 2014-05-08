@@ -195,7 +195,7 @@
     echo $model->FirstLetter("Des Weiteren bieten wir in unserer Tagesbetreuung Ihrem Kind die Möglichkeit, 
         seine <strong>Fein- und Grobmotorik</strong> zu entwickeln. Durch den täglichen Aufenthalt im Freien mit Freispielen soll 
         dies gefördert werden. Die Entwicklung Ihres Kindes ist ein Prozess, in dem die Bewegung eine ganz wichtige Rolle einnimmt. 
-        Dadurch lernt Ihr Kind sich selbst und seine körperlichen Fähigkeiten kennen – ganz nach dem Motto &ldquo;Bewegung macht schlau!&bdquo;");
+        Dadurch lernt Ihr Kind sich selbst und seine körperlichen Fähigkeiten kennen - ganz nach dem Motto &ldquo;Bewegung macht schlau!&bdquo;");
     echo $p;
     echo $model->FirstLetter("Die <strong>grobmotorische Entwicklung</strong> fördern wir insbesondere durch Tätigkeiten im Garten, 
         wie z. B. durch Ballspiele, Sandspiele, Drachen steigen lassen, Bobby-Car fahren usw. 
