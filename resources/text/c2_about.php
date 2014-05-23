@@ -1,6 +1,26 @@
 <div class="article_text">
     <br>
     <!-- http://fancyapps.com/fancybox/ -->
+    
+    
+        <div id="photo_all">
+             <a title="ich bin Hermann Böhm" class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_3b.jpg">
+            <img class="curved" src="<?php echo Constans::IMAGE_PATCH ?>tm_photo_3a.jpg" alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>"></a>
+
+            
+        <a 
+            title="Ich bin Olga Böhm" 
+            class="fancybox" 
+            rel="group" 
+            href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_1b.jpg">
+            <img 
+                class="curved" 
+                src="<?php echo Constans::IMAGE_PATCH ?>tm_photo_1a.jpg" 
+                alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
+        </a>
+
+           </div>
+   
     <div id="photo_olga">
         <a 
             title="Ich bin Olga Böhm" 
@@ -26,7 +46,7 @@
 
     </div>
 
-    <br />
+ 
     <h2><?php echo $model->Umlaute("Olga Böhm") ?></h2>
     <p>
         <img class="icon" src="<?php echo Constans::ICON_PATCH ?>check.png" alt="check" style="width: 16px;">

@@ -2,21 +2,24 @@ $(document).ready(function(){
     allgemein = "&Uuml;ber mich";
     allgemeinOlga = "allgemein_olga";
     allgemeinHermann = "allgemein_hermann";
+    allgemeinAll = "allgemein_all"
     erfahrung = "meine Erfahrung";
     erfahrungOlga = "erfahrung_olga";
     erfahrungHermann = "erfahrung_hermann";
         
-    $('li').removeClass("last");
-    $('#ul_about').append("\
-            <li class='erzieher'><span id='Olga' class='navi a' onClick='reply(this.id)'>Olga</span></li>\n\
-            <li class='last' id='li_"+allgemeinOlga+"'>"+ allgemein +"</li>");
+//    $('li').removeClass("last");
+//    $('#ul_about').append("\
+//            <li class='erzieher'><span id='Olga' class='navi a' onClick='reply(this.id)'>Olga</span></li>\n\
+//            <li class='last' id='li_"+allgemeinOlga+"'>"+ allgemein +"</li>");
     $('.navi').addClass('a');
-    $('#about_'+allgemeinOlga).removeClass('a');
+    $('#about_'+allgemeinAll).removeClass('a');
     $('#text_'+erfahrungOlga).hide();
     $('#text_'+allgemeinHermann).hide();
     $('#text_'+erfahrungHermann).hide();
+    $('#text_'+allgemeinOlga).hide();
     $('#photo_hermann').hide();
-    unclicable = allgemeinOlga;
+    $('#photo_olga').hide();
+    unclicable = allgemeinAll;
 });
 // Bei Click auf "meine erfahrung"
 $('#about_erfahrung_olga').bind("click", {
@@ -31,7 +34,6 @@ $('#about_erfahrung_hermann').bind("click", {
 $('#about_allgemein_hermann').bind("click", {
     click:"allgemein_hermann"
 }, about);
-
 
 /**
  * Sehe fnct_bearbeiten
@@ -50,24 +52,28 @@ function about(event){
         if(unclicable != erfahrungOlga){                
             Bearbeitung(erfahrung, erfahrungOlga, "about", "Olga");
             $('#photo_hermann').hide();
+            $('#photo_all').hide();
             $('#photo_olga').show();
         }
     } else if(event.data.click == allgemeinOlga){
         if(unclicable != allgemeinOlga){
             Bearbeitung(allgemein, allgemeinOlga, "about", "Olga");
             $('#photo_hermann').hide();
+            $('#photo_all').hide();
             $('#photo_olga').show();
         }
     } else if(event.data.click == erfahrungHermann){   
         if(unclicable != erfahrungHermann){                
             Bearbeitung(erfahrung, erfahrungHermann, "about", "Hermann");
             $('#photo_hermann').show();
+            $('#photo_all').hide();
             $('#photo_olga').hide();
         }
     } else if(event.data.click == allgemeinHermann){
         if(unclicable != allgemeinHermann) {
             Bearbeitung(allgemein, allgemeinHermann, "about", "Hermann");
             $('#photo_hermann').show();
+            $('#photo_all').hide();
             $('#photo_olga').hide();
         }
     }       
