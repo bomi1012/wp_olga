@@ -43,39 +43,4 @@
 <!--http://www.plugolabs.com/twitter-bootstrap-button-generator/--> 
 <!--        http://www.comparenetworks.com/developers/jqueryplugins/jbreadcrumb.html  -->
 
-<script type="text/javascript">
-    jQuery(document).ready(function()
-    {
-        jQuery("#breadCrumb0").jBreadCrumb();
-        jQuery("#breadCrumb1").jBreadCrumb();
-        jQuery("#breadCrumb2").jBreadCrumb();
-        jQuery("#breadCrumb3").jBreadCrumb();
-    })
-</script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $(".fancybox").fancybox();                
-    });
-        
-</script>
-
-
-<script type="text/javascript">
-$(document).ready(function() {
-	$(".various").fancybox({
-		maxWidth	: 800,
-		maxHeight	: 600,
-		fitToView	: false,
-		width		: '70%',
-		height		: '70%',
-		autoSize	: false,
-		closeClick	: true,
-		openEffect	: 'none',
-		//closeEffect	: 'none'
-	});
-        
-        
-        
-});
-
-</script>
+<script type="text/javascript" src="resources/js/default.js" ></script>
