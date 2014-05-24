@@ -13,28 +13,42 @@
 <div class="article_text c1" id="text_rahmenbedingungen">
     <?php
     echo $p;
-    echo $model->FirstLetter("Die Betreuung unserer Tageskinder findet in einer Doppelhaushälfte (Eigentum) statt. 
-        Wir verfügen hier über etwa 160 qm, die ausreichend Raum zum Spielen und Toben, aber auch zum Ausruhen bieten.");
+    echo $model->FirstLetter("Die Betreuung unserer Tageskinder findet in einer Doppelhaushälfte, 
+        welche unser Eigentum ist, statt. Wir verfügen hier über etwa 160 qm, die ausreichend Raum zum Spielen und Toben, 
+        aber auch zum Ausruhen bieten. ");
     echo $p;
     echo $model->FirstLetter("Unser Haus verteilt sich auf 2 Stockwerke. Im Erdgeschoss befindet sich das weiträumige, 
-        helle Wohnzimmer, welches wir für die unterschiedlichsten Aktivitäten nutzen. Direkt an das Wohnzimmer grenzen die große, 
-        liebevoll eingerichtete Terrasse und der großflächig angelegte Garten an. Hier lässt sich besonders gut spielen und toben. 
-        Deswegen verlegen wir bei gutem Wetter sämtliche Aktivitäten nach draußen.");
+        helle Wohnzimmer, an welches direkt die große, liebevoll eingerichtete Terrasse und der großflächig angelegte 
+        Garten grenzen. Hier toben und spielen unsere Tageskinder besonders gerne, weswegen wir bei gutem Wetter sämtliche 
+        Aktivitäten nach draußen verlagern. ");
     echo $p;
-    echo $model->FirstLetter("Der Garten ist von Büschen &ldquo;umzäunt&bdquo;, die eine Hecke bilden. 
-        Die Nachbarsgrundstücke sind durch entsprechende Zäune von unserem Grundstück getrennt. 
-        Unser Garten liegt an einem sogenannten &ldquo;Pocketpark&bdquo;. D. h., es besteht keine Gefahr durch eine angrenzende 
-        Hauptstraße. Er ist übersichtlich gestaltet, sodass wir unsere Tageskinder jederzeit gut im Blick haben. 
-        Neben der großen, gepflegten Rasenfläche finden die Kinder hier einen abdeckbaren Sandkasten mit einer Vielzahl an 
-        Schaufeln und Förmchen, zwei Schaukeln für Groß und Klein, ein Spielhaus und die verschiedensten Fahrzeuge für alle 
-        Altersstufen.");
+    echo $model->FirstLetter("Seit dem Frühjahr 2014 ist unser Haus um ein tolles Spielzimmer reicher. 
+        Das neu gebaute Spielzimmer mit einer Größe von insgesamt 32 m<sup>2</sup> (wovon 2 m<sup>2</sup> auf den Eingangsbereich fallen) 
+        grenzt direkt an das Wohnzimmer an und lässt sich sowohl vom Wohnzimmer wie auch vom Garten aus durch einen separaten 
+        Zugang betreten. Diese extra für die Kinder errichtete Fläche ist von uns selbst entworfen, konstruiert, gebaut 
+        und eingerichtet. Das ganz besondere Highlight ist hier eine Hochebene, die von einer Seite durch eine Treppe begehbar ist, 
+        den Kindern dann einen wunderbaren Ausblick auf die Umgebung bietet und auf der anderen Seite über eine Rutsche, welche 
+        direkt in ein buntes Bällebad führt, verlassen werden kann. Weiterhin findet sich in unserem Spielzimmer eine Kuschelecke, 
+        die mit Kissen und Decken zum Ausruhen und Schmusen einlädt. Ein auf die Größe der Kinder angepasster Esstisch inkl. 
+        Stühlen rundet das familiäre Ambiente perfekt ab. Spielsachen, Bücher, Farben und alles, was die Kinder für ihre Entwicklung 
+        brauchen, findet in kleinen Schränken und Kisten seinen Platz. Im Eingangsbereich des Spielzimmers ist eine Garderobe 
+        untergebracht, die genau die richtige Größe für die Tageskinder hat. Hier erhält jedes Kind sein eigenes Fach mit Namenschild 
+        und Bildchen. Ein Kinderwaschbecken, die Zahnputzstation und ein Wickeltisch sorgen für sämtliche Aspekte der Hygiene. ");
     echo $p;
-    echo $model->FirstLetter("Im 1. OG haben wir mehrere Schlafgelegenheiten eingerichtet. 
-        Hier stehen mehrere Kinderbetten für den Mittagsschlaf oder ein Schläfchen zwischendurch bereit.");
+    echo $model->FirstLetter("Im 1. OG haben wir mehrere Schlafgelegenheiten für unsere Tageskinder eingerichtet. 
+        Hier stehen mehrere Kinderbetten für den Mittagsschlaf oder ein Schläfchen zwischendurch bereit. ");
+        echo $p;
+    echo $model->FirstLetter("Der Garten ist von Büschen umzäunt, die eine Hecke bilden. Die Nachbarsgrundstücke sind durch 
+        Zäune von unserem Grundstück getrennt. Das Areal ist auf allen Seiten geschlossen, sodass wir immer alle Kinder im Blick 
+        haben. Unser Garten liegt an einem sogenannten &ldquo;Pocketpark&bdquo;, d. h., es besteht keine Gefahr durch eine angrenzende 
+        Hauptstraße. Er ist übersichtlich gestaltet, sodass wir unsere Tageskinder jederzeit gut sehen können. Neben der großen, 
+        gepflegten Rasenfläche finden die Kinder hier eine riesige Kletterburg, die eine tolle Hochfläche, Klettermöglichkeiten, 
+        eine Rutsche und einen darunterliegenden Sandkasten bietet. Zwei Schaukeln für Groß und Klein, verschiedenste 
+        Fahrzeuge für alle Altersstufen, Bälle, Förmchen und viele weitere Spielzeuge für draußen sorgen für Aktivität und Abwechslung. ");
     echo $p;
     echo $model->FirstLetter("Unsere <a class='various fancybox.iframe' href='" . Constans::GOOGLEMAP . "'>Tagespflegestelle</a> 
         ist sehr gut erreichbar. Direkt im &ldquo;Pocketpark&bdquo; stehen Ihnen viele Parkplätze zur Verfügung und in 
-        unmittelbarer Nähe befindet sich eine Bushaltestelle (z. B. in der Robert-Koch-Straße).");
+        unmittelbarer Nähe befindet sich eine Bushaltestelle (z. B. in der Robert-Koch-Straße). ");
     ?>
 </div>
 

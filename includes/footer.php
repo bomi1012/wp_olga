@@ -1,9 +1,14 @@
 <a href="http://www.tagesmutter-landau.de">Home</a> | <a href="http://www.tagesmutter-landau.de/kontakt.php">Kontakte</a> | <a href="impressum.php">Impressum</a>
 <p >
-<div style="text-align:center"><a href="http://www.andyhoppe.com/"
-title="Counter"><img
-src="http://c.andyhoppe.com/1381770490"
-style="border:none" alt="Counter" /></a></div>
+    <!-- counter -->
+<div style="text-align:center">
+    <a href="http://www.andyhoppe.com/" title="Counter">
+        <img src="http://c.andyhoppe.com/1381770490" style="border:none" alt="Counter" />
+    </a>
+</div>
+
+<!-- counter -->
+
 <!-- Place this tag where you want the +1 button to render. -->
 <div class="g-plusone"></div>
 
