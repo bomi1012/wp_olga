@@ -58,7 +58,7 @@
     echo $model->FirstLetter("Wir bieten Ihnen verschiedene, ganz individuell auf Ihre Bedürfnisse abgestimmte, 
             Betreuungsformen an. Von Montag bis Freitag stehen wir Ihnen schon ab 7:00 Uhr zur Verfügung. Die genaue 
             Uhrzeit der Abgabe und der Abholung Ihres Kindes legen wir gemeinsam im persönlichen Gespräch fest. 
-            Wir betreuen maximal 5 Kinder gleichzeitig. Alle getroffenen Vereinbarungen halten wir in einer sogenannten 
+            Alle getroffenen Vereinbarungen halten wir in einer sogenannten 
             &ldquo;Betreuungsvereinbarung zur Kindertagespflege&bdquo; schriftlich fest. Unsere Tagespflegestelle ist an Samstagen, 
             Sonn- und gesetzlichen Feiertagen geschlossen. Wir bieten Ihnen auch die Möglichkeit eines Bring- und Abholservices 
             für Ihr Kind an. Dies ist uns aufgrund des Vorhandenseins der benötigten Ausstattung möglich. 
