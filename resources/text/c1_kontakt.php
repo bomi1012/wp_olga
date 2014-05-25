@@ -1,7 +1,16 @@
 <?php
 if (isset($_POST["submit"])) {
-    $kontakt = new Kontakt();
-    $result = $kontakt->NachrichtSenden($_POST[Constans::ANREDE], $model->Umlaute($_POST[Constans::NAME]), $_POST[Constans::EMAIL], $model->Umlaute($_POST[Constans::NACHRICHT]));
+    if ($_POST["frage"] == "5") {
+        $kontakt = new Kontakt();
+        $result = $kontakt->NachrichtSenden($_POST[Constans::ANREDE], $model->Umlaute($_POST[Constans::NAME]), $_POST[Constans::EMAIL], $model->Umlaute($_POST[Constans::NACHRICHT]));
+    } else {
+        ?>
+        <div class="alert alert-error alert-oben">
+            <a href="#" class="close right" data-dismiss="alert">&times;</a>
+            Ihre Nachricht wurde nicht gesendet, weil die Antwort falsch ist.
+        </div>
+        <?php
+    }
 }
 
 if (isset($result) && $result == true) {
@@ -36,6 +45,13 @@ if (isset($result) && $result == true) {
         <label><?php echo Constans::NACHRICHT ?>*:</label>
         <textarea required rows="6" class="input-xlarge-area norezise" name="<?php echo Constans::NACHRICHT ?>" id="id_<?php echo Constans::NACHRICHT ?>"></textarea>
         <div class="leerzeile"></div>       
+
+        <label><b>3 + 2 = *:</b></label>
+        <div class="input-prepend"><span class="add-on"><i class="icon-question "></i></span>
+            <input required type="text" id="id_frage" name="frage">
+        </div> <div class="leerzeile"></div>     
+
+
         <button type="submit" class="btn btn-success right leerzeichen" name="submit">
             <i class="icon-white icon-check"></i> Nachricht senden
         </button>
@@ -43,6 +59,6 @@ if (isset($result) && $result == true) {
 </div>
 
 <div class="alert alert-info alert-oben-big">
-        <a href="#" class="close right" data-dismiss="alert">&times;</a>
-        * Pflichtfeld
+    <a href="#" class="close right" data-dismiss="alert">&times;</a>
+    * Pflichtfeld
 </div>
