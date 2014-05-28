@@ -1,16 +1,9 @@
 <?php
 if (isset($_POST["submit"])) {
-    if ($_POST["frage"] == "5") {
+    if (!isset($_POST["comment"])) {
         $kontakt = new Kontakt();
         $result = $kontakt->NachrichtSenden($_POST[Constans::ANREDE], $model->Umlaute($_POST[Constans::NAME]), $_POST[Constans::EMAIL], $model->Umlaute($_POST[Constans::NACHRICHT]));
-    } else {
-        ?>
-        <div class="alert alert-error alert-oben">
-            <a href="#" class="close right" data-dismiss="alert">&times;</a>
-            Ihre Nachricht wurde nicht gesendet, weil die Antwort falsch ist.
-        </div>
-        <?php
-    }
+    } 
 }
 
 if (isset($result) && $result == true) {
@@ -46,11 +39,11 @@ if (isset($result) && $result == true) {
         <textarea required rows="6" class="input-xlarge-area norezise" name="<?php echo Constans::NACHRICHT ?>" id="id_<?php echo Constans::NACHRICHT ?>"></textarea>
         <div class="leerzeile"></div>       
 
-        <label><b>3 + 2 = *:</b></label>
-        <div class="input-prepend"><span class="add-on"><i class="icon-question "></i></span>
-            <input required type="text" id="id_frage" name="frage">
-        </div> <div class="leerzeile"></div>     
-
+        <label style="display: none"> </label>
+        <div style="display: none" class="input-prepend">
+            <span class="add-on"><i class="icon-question "></i></span>
+            <input required type="comment" id="id_frage" name="comment">
+        </div>  
 
         <button type="submit" class="btn btn-success right leerzeichen" name="submit">
             <i class="icon-white icon-check"></i> Nachricht senden
