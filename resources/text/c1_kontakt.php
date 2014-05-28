@@ -1,9 +1,9 @@
 <?php
 if (isset($_POST["submit"])) {
-    if (!isset($_POST["comment"])) {
+    if($_POST["comment"] == "") {
         $kontakt = new Kontakt();
         $result = $kontakt->NachrichtSenden($_POST[Constans::ANREDE], $model->Umlaute($_POST[Constans::NAME]), $_POST[Constans::EMAIL], $model->Umlaute($_POST[Constans::NACHRICHT]));
-    } 
+    }
 }
 
 if (isset($result) && $result == true) {
@@ -42,7 +42,7 @@ if (isset($result) && $result == true) {
         <label style="display: none"> </label>
         <div style="display: none" class="input-prepend">
             <span class="add-on"><i class="icon-question "></i></span>
-            <input required type="comment" id="id_frage" name="comment">
+            <input type="comment" id="id_frage" name="comment">
         </div>  
 
         <button type="submit" class="btn btn-success right leerzeichen" name="submit">
