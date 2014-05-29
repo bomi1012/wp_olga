@@ -1,9 +1,15 @@
 <?php
+$zahl_von_date = substr(date('d'), 0, 1);
 if (isset($_POST["submit"])) {
-    if($_POST["comment"] == "") {
+    if($_POST["frage"] == $model->createFrage($zahl_von_date, 10)) {
         $kontakt = new Kontakt();
         $result = $kontakt->NachrichtSenden($_POST[Constans::ANREDE], $model->Umlaute($_POST[Constans::NAME]), $_POST[Constans::EMAIL], $model->Umlaute($_POST[Constans::NACHRICHT]));
-    }
+    } else {  ?>
+            <div class="alert alert-error alert-oben">
+        <a href="#" class="close right" data-dismiss="alert">&times;</a>
+        Ihre Nachricht wurde nicht gesendet, da die Antwort falsch war.
+    </div>
+<?php    }
 }
 
 if (isset($result) && $result == true) {
@@ -39,11 +45,18 @@ if (isset($result) && $result == true) {
         <textarea required rows="6" class="input-xlarge-area norezise" name="<?php echo Constans::NACHRICHT ?>" id="id_<?php echo Constans::NACHRICHT ?>"></textarea>
         <div class="leerzeile"></div>       
 
-        <label style="display: none"> </label>
-        <div style="display: none" class="input-prepend">
-            <span class="add-on"><i class="icon-question "></i></span>
-            <input type="comment" id="id_frage" name="comment">
+       
+            <label> 
+                <acronym title="Damit wir sicher sein, dass Sie ein Mensch sind, bitte geben Sie den Code aus dem Bild.">
+                    <?php echo $zahl_von_date . ' plus I0 = *'; ?> 
+                </acronym>
+            </label>
+        
+
+        <div class="input-prepend"><span class="add-on"><i class="icon-question"></i></span>
+            <input required type="text"  id="id_frage" name="frage">
         </div>  
+        <div class="leerzeile"></div>
 
         <button type="submit" class="btn btn-success right leerzeichen" name="submit">
             <i class="icon-white icon-check"></i> Nachricht senden
