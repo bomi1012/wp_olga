@@ -5,19 +5,100 @@ $album->randomImages(2);
 
 <div class="article_text">
     <br />    
-    <div id="photo_konzept">
-        <?php foreach ($album->getRandomImages() as $min => $big) {  ?>
+<!--    <div id="photo_konzept">
+        <?php //foreach ($album->getRandomImages() as $min => $big) { ?>
             <a 
                 class="fancybox" 
                 rel="group" 
-                href="<?php echo $album->getAlbum()->getDir() ?>/<?php echo $big ?>">
+                href="<?php //echo $album->getAlbum()->getDir() ?>/<?php //echo $big ?>">
                 <img 
                     class="curved" 
-                    src="<?php echo $album->getAlbum()->getDir() ?>/<?php echo $min ?>" 
+                    src="<?php //echo $album->getAlbum()->getDir() ?>/<?php //echo $min ?>" 
                     alt="Photo"></a>
-        <?php } ?>
+            <?php //} ?>
+    </div>-->
+
+<!-- rahmenbedingungen -->
+    <div class="photos_konzept photo_konzept_rahmenbedingungen" style="display: none">
+        <a 
+            class="fancybox" 
+            rel="group" 
+            href="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_rahmenbedingungen_01_big.jpg">
+            <img 
+                class="curved" 
+                src="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_rahmenbedingungen_01_min.jpg" 
+                alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
+        </a>
+          <a 
+            class="fancybox" 
+            rel="group" 
+            href="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_rahmenbedingungen_02_big.jpg">
+            <img 
+                class="curved" 
+                src="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_rahmenbedingungen_02_min.jpg" 
+                alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
+        </a>
     </div>
-    <br />
+<!-- AUF // ZU -->
+    <div class="photos_konzept photo_konzept_auf_zu" style="display: none">
+        <a 
+            class="fancybox" 
+            rel="group" 
+            href="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_auf_zu_01_big.jpg">
+            <img 
+                class="curved" 
+                src="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_auf_zu_01_min.jpg" 
+                alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
+        </a>
+    </div>
+
+<!-- Ziele -->
+    <div class="photos_konzept photo_konzept_ziele" style="display: none">
+        <a 
+            class="fancybox" 
+            rel="group" 
+            href="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_ziele_01_big.jpg">
+            <img 
+                class="curved" 
+                src="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_ziele_01_min.jpg" 
+                alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
+        </a>
+        <a 
+            class="fancybox" 
+            rel="group" 
+            href="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_ziele_02_big.jpg">
+            <img 
+                class="curved" 
+                src="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_ziele_02_min.jpg" 
+                alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
+        </a>
+    </div>
+
+<!-- Schwerpunkte -->
+    <div class="photos_konzept photo_konzept_schwerpunkte" style="display: none">
+        <a 
+            class="fancybox" 
+            rel="group" 
+            href="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_schwerpunkte_01_big.jpg">
+            <img 
+                class="curved" 
+                src="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_schwerpunkte_01_min.jpg" 
+                alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
+        </a>
+        <a 
+            class="fancybox" 
+            rel="group" 
+            href="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_schwerpunkte_02_big.jpg">
+            <img 
+                class="curved" 
+                src="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_schwerpunkte_02_min.jpg" 
+                alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
+        </a>
+    </div>
+
+
+
+
 
     <h2 ><?php echo Constans::CONCEPT ?>:</h2>
     <p>
@@ -79,7 +160,10 @@ $album->randomImages(2);
         $('.c1').hide();
         $('#text_' + vorwortDiv).show();
         unclicable = vorwortDiv;
-    })
+        
+        //photo
+        $('.photos_konzept').hide();        
+    });
     // Bei Click auf "meine erfahrung"
     $('#konzept_vorwort').bind("click", {
         click: "vorwort"
@@ -118,46 +202,61 @@ $album->randomImages(2);
     function konzept(event) {
         if (event.data.click == vorwortDiv) {
             if (unclicable != vorwortDiv) {
+                $('.photos_konzept').hide();
                 Bearbeitung(vorwort, vorwortDiv, "konzept");
             }
         } else if (event.data.click == rahmenbedingungenDiv) {
             if (unclicable != rahmenbedingungenDiv) {
+                $('.photos_konzept').hide();
+                $('.photo_konzept_rahmenbedingungen').show();
                 Bearbeitung(rahmenbedingungen, rahmenbedingungenDiv, "konzept");
             }
         } else if (event.data.click == auf_zuDiv) {
             if (unclicable != auf_zuDiv) {
+                $('.photos_konzept').hide();
+                $('.photo_konzept_auf_zu').show();
                 Bearbeitung(auf_zu, auf_zuDiv, "konzept");
             }
         } else if (event.data.click == zieleDiv) {
             if (unclicable != zieleDiv) {
+                $('.photos_konzept').hide();
+                $('.photo_konzept_ziele').show();
                 Bearbeitung(ziele, zieleDiv, "konzept");
             }
         } else if (event.data.click == schwerpunkteDiv) {
             if (unclicable != schwerpunkteDiv) {
+                $('.photos_konzept').hide();
+                $('.photo_konzept_schwerpunkte').show();
                 Bearbeitung(schwerpunkte, schwerpunkteDiv, "konzept");
             }
         } else if (event.data.click == spieleDiv) {
             if (unclicable != spieleDiv) {
+                $('.photos_konzept').hide();
                 Bearbeitung(spiele, spieleDiv, "konzept");
             }
         } else if (event.data.click == tagDiv) {
             if (unclicable != tagDiv) {
+                $('.photos_konzept').hide();
                 Bearbeitung(tag, tagDiv, "konzept");
             }
         } else if (event.data.click == elternDiv) {
             if (unclicable != elternDiv) {
+                $('.photos_konzept').hide();
                 Bearbeitung(eltern, elternDiv, "konzept");
             }
         } else if (event.data.click == institutDiv) {
             if (unclicable != institutDiv) {
+                $('.photos_konzept').hide();
                 Bearbeitung(institut, institutDiv, "konzept");
             }
         } else if (event.data.click == eingewoehnungDiv) {
             if (unclicable != eingewoehnungDiv) {
+                $('.photos_konzept').hide();
                 Bearbeitung(eingewoehnung, eingewoehnungDiv, "konzept");
             }
         } else if (event.data.click == bezahlungDiv) {
             if (unclicable != bezahlungDiv) {
+                $('.photos_konzept').hide();
                 Bearbeitung(bezahlung, bezahlungDiv, "konzept");
             }
         }

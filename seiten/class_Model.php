@@ -106,7 +106,6 @@ class Model {
     public function Link($link, $text) {
         return "<a href = '" . $link . "'>" . $text . "</a>";
     }
-
 }
 
 ?>
