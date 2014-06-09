@@ -1,5 +1,8 @@
 <?php
-$zahl_von_date = substr(date('d'), 0, 1);
+(substr(date('d'), 0, 1) == 0) 
+        ? $zahl_von_date = substr(date('d'), 1, 1) 
+        : $zahl_von_date = substr(date('d'), 0, 1);
+
 if (isset($_POST["submit"])) {
     if($_POST["frage"] == $model->createFrage($zahl_von_date, 10)) {
         $kontakt = new Kontakt();
