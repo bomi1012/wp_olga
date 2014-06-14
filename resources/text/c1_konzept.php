@@ -83,7 +83,7 @@
                 <br/><i class='fa fa-angle-double-right icon-botton'></i> Verantwortungsbewusstsein
                 <br/><i class='fa fa-angle-double-right icon-botton'></i> Zuverlässiges Handeln
                 <br/><i class='fa fa-angle-double-right icon-botton'></i> Selbstständigkeit
-            </div>Selbst
+            </div>
 ");
     echo $p;
     echo $model->FirstLetter("Unsere Tagespflegekinder fühlen sich in der warmen, 
@@ -92,17 +92,6 @@
             das Helfen und sie lernen, sich helfen zu lassen. Sie lernen voneinander und miteinander, sie lernen, 
             einander zuzuhören und sich mitzuteilen. Sie erleben Grenzen und gewinnen dadurch Sicherheit im Leben. ");
     ?>
-
-    <!--  
-    
-        <blockquote>
-            <p>
-                Selbstst&auml;ndigkeit ist f&uuml;r die fr&uuml;hkindliche Entwicklung von gro&szlig;er Bedeutung, denn in dieser Phase entdeckt das  Kind die Welt f&uuml;r sich. 
-                Selbstst&auml;ndigkeit bedeutet vor diesem Hintergrund, dass Kinder selber laufen m&ouml;chten, sich selbst an- oder ausziehen, sich 
-                selbst ihr essen nehmen und entscheiden k&ouml;nnen, mit wem oder was sie spielen m&ouml;chten.
-            </p>
-        </blockquote>
-    -->
 </div>
 <div class="article_text c1" id="text_schwerpunkte">
     <?php
@@ -271,9 +260,9 @@
     echo $p;
     echo $model->FirstLetter("Wir bereiten täglich gesundes und hausgemachtes Essen zu. Bei der Auswahl der Zutaten achten 
         wir auf Frische und gute Qualität der Produkte. Auch beim Mittagessen möchten kleine Kinder die Situation meist selber 
-        meistern. Sie eifern den „Großen“ nach. Kinder versuchen oft schon sehr früh, Geschirr aufzustellen und später wieder
+        meistern. Sie eifern den &ldquo;Großen&bdquo; nach. Kinder versuchen oft schon sehr früh, Geschirr aufzustellen und später wieder
         abzuräumen. Geht mal etwas zu Bruch ist das nicht schlimm. Ihr Kind ist um eine Erfahrung reicher geworden. 
-        Mit einem Jahr fangen die Kinder oft an, selbstständig zu essen. Dabei bauen „gelungene Aktivitäten“ bereits in diesem
+        Mit einem Jahr fangen die Kinder oft an, selbstständig zu essen. Dabei bauen &ldquo;gelungene Aktivitäten&bdquo; bereits in diesem
         frühen Stadium wichtiges Selbstvertrauen und Zuversicht auf. ");
     echo $p;
     echo $model->FirstLetter("Bei ganz kleinen Kindern bitten wir Sie, Gläschen mitzubringen. Zum Trinken bieten wir Wasser, 
