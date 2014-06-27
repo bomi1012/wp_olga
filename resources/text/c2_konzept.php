@@ -50,6 +50,15 @@ $album->randomImages(2);
                 src="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_auf_zu_01_min.jpg" 
                 alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
         </a>
+        <a 
+            class="fancybox" 
+            rel="group" 
+            href="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_auf_zu_02_big.jpg">
+            <img 
+                class="curved" 
+                src="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_auf_zu_02_min.jpg" 
+                alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
+        </a>
     </div>
 
 <!-- Ziele -->
@@ -95,10 +104,53 @@ $album->randomImages(2);
                 alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
         </a>
     </div>
+<!-- Eingewoenung -->
+    <div class="photos_konzept photo_konzept_eingewoehnung" style="display: none">
+        <a 
+            class="fancybox" 
+            rel="group" 
+            href="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_eingewoehnung_01_big.jpg">
+            <img 
+                class="curved" 
+                src="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_eingewoehnung_01_min.jpg" 
+                alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
+        </a>
+    </div>
 
+<!-- Tag -->
+    <div class="photos_konzept photo_konzept_tag" style="display: none">
+        <a 
+            class="fancybox" 
+            rel="group" 
+            href="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_tag_01_big.jpg">
+            <img 
+                class="curved" 
+                src="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_tag_01_min.jpg" 
+                alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
+        </a>
+    </div>
 
-
-
+<!-- Spiele -->
+    <div class="photos_konzept photo_konzept_spiele" style="display: none">
+        <a 
+            class="fancybox" 
+            rel="group" 
+            href="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_spiele_01_big.jpg">
+            <img 
+                class="curved" 
+                src="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_spiele_01_min.jpg" 
+                alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
+        </a>
+         <a 
+            class="fancybox" 
+            rel="group" 
+            href="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_spiele_02_big.jpg">
+            <img 
+                class="curved" 
+                src="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_spiele_02_min.jpg" 
+                alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
+        </a>
+    </div>
 
     <h2 ><?php echo Constans::CONCEPT ?>:</h2>
     <p>
@@ -232,11 +284,13 @@ $album->randomImages(2);
         } else if (event.data.click == spieleDiv) {
             if (unclicable != spieleDiv) {
                 $('.photos_konzept').hide();
+                $('.photo_konzept_spiele').show();
                 Bearbeitung(spiele, spieleDiv, "konzept");
             }
         } else if (event.data.click == tagDiv) {
             if (unclicable != tagDiv) {
                 $('.photos_konzept').hide();
+                $('.photo_konzept_tag').show();
                 Bearbeitung(tag, tagDiv, "konzept");
             }
         } else if (event.data.click == elternDiv) {
@@ -252,6 +306,7 @@ $album->randomImages(2);
         } else if (event.data.click == eingewoehnungDiv) {
             if (unclicable != eingewoehnungDiv) {
                 $('.photos_konzept').hide();
+                $('.photo_konzept_eingewoehnung').show();
                 Bearbeitung(eingewoehnung, eingewoehnungDiv, "konzept");
             }
         } else if (event.data.click == bezahlungDiv) {
