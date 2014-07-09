@@ -70,7 +70,7 @@ Ersetzen Sie das Zeichen ß durch die Zeichenfolge &szlig;
     
     const KW_TAGESMUTTER = "Tagesmutter";
     const KW_LANDAU = "Landau";
-    const KW_BETREUUNG = "Kinderbetreuung";
+    const KW_BETREUUNG = "KINDERBETREUUNG";
     const KW_ROTKAEPPCHEN = "Rotk&auml;ppchen";
     const KW_SONNE = "Sonne";
     const KW_SCHMETTERLING = "Schmetterling";

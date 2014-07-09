@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'Book Roman';
+  src: url('../font/meta_book_roman.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Itckrist';
+  src: url('../font/itckrist.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+itckrist
+
 /* Getting the new tags to behave */
 article,aside,audio,canvas,command,datalist,details,embed,figcaption,figure,footer,header,hgroup,keygen,meter,nav,output,progress,section,source,video {display:block}
 mark,rp,rt,ruby,summary,time {display:inline}
@@ -69,7 +85,7 @@ header {}
 #menu a:hover span span,#menu #menu_active a span span,#menu .alpha#menu_active a span span,#menu .alpha a:hover span span {background:url(../images/menu_right_active.gif) top right no-repeat}
 .bild_gross{
     float: left;
-    margin:10px 80px 0 90px;
+    margin:20px 80px 0 90px;
     width: 260px;
 }
 div.bild_oben{
@@ -153,18 +169,35 @@ footer a:hover {}
 
 
 /*Fonts*/
-span.bonbon{
-    font-family: 'Bonbon', cursive;
-    letter-spacing: 5px;
+
+.bild {
+    width: 250px;
+    padding-top: 35px;
+    padding-bottom: 15px;
+    margin-left: -115px;
+    margin-top: -50px;
 }
-.red{
-    color: red;
+
+.div_betreuung {
+    margin-top: 100px;  
+    margin-left: -220px;
+    margin-bottom: 10px;
 }
-.bonbon_gross{
-    font-size: 55px;
+
+.div_betreuung_kaepchen {
+    padding-top: 25px;
+    margin-left: -260px;
 }
-.bonbon_klein{
+
+.title_gross_oben{
+    font-family: 'Itckrist';
+    font-size: 65px;
+    color: #B22431;
+}
+.title_klein_oben{
+    font-family: 'Book Roman';
     font-size: 25px;
+    color: #CBA256;
 }
 
 .kids{
@@ -229,6 +262,7 @@ blockquote {
     line-height: 1.45;
     position: relative;
     color: #383838;
+    border-left: none;
 }
 
 blockquote:before {
@@ -418,4 +452,8 @@ margin-bottom: -10px;
 
 .icon-botton {
     margin:6px 0 0 0;
+}
+
+blockquote.abstand {
+    margin: 20px 0 40px 0;
 }
