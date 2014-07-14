@@ -40,7 +40,20 @@ class AlbumManager {
             $this->_randomImages[$rand_keys[$index]] = $this->_allImages[$rand_keys[$index]];
         }
     }
-
+    
+    public function getTitle($title) {
+        $result = "unbekannt";
+        switch ($title) {
+            case "2013":
+                $result = "Bilder aus dem Jahr 2013";
+                break;
+            case "2014":
+                $result = "Bilder aus dem Jahr 2014";
+                break;
+        }
+        return $result;
+    }
+    
     /**
      * Найти все фотографии в папке
      */
@@ -85,6 +98,8 @@ class AlbumManager {
         }
         return strpos($content, $str) ? true : false;
     }
+    
+    
 }
 
 ?>

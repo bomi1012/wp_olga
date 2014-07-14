@@ -1,7 +1,16 @@
 <?php
-$album = new AlbumManager(Constans::ALBUM_PATCH, '1');
+$root = "album";
+$sep = "/";
+if (isset($_GET['jahr'])) {
+    $albumTitle = $_GET['jahr'];
+} else {
+    $albumTitle = "2013";
+}
+
+$album = new AlbumManager(Constans::ALBUM_PATCH, $root . $sep . $albumTitle);
 ?>
-<div class="article_text span9">  
+<h1> <?php echo $album->getTitle($albumTitle); ?> </h1>
+<div class="article_text span8">  
     <?php
     foreach ($album->getAllImages() as $min => $big) {
         ?>
