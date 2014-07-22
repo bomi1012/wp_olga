@@ -34,5 +34,6 @@ set_error_handler("customError");
 @include 'seiten/class_Adminarea.php';
 @include 'seiten/AlbumManagerClass.php';
 @include 'seiten/AlbumEntityClass.php';
+@include 'seiten/PaginationClass.php';
 @include 'seiten/class_Logging.php';
 ?>

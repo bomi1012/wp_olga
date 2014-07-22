@@ -5,6 +5,8 @@
  */
 class AlbumManager {
     
+    private $_paginationClass;
+    
     private $_album;     
     /**  @see AlbumEntity */
     public function getAlbum() { return $this->_album; }
@@ -21,9 +23,22 @@ class AlbumManager {
      * @param String $path
      * @param String $folder
      */
-    public function __construct($path, $folder) {
+    public function __construct() {
+        $this->_paginationClass = new Pagination();
+    }
+    
+    public function albumInit($path, $folder) {
         $this->_album = new AlbumEntity($path, $folder); 
-        $this->getAllFilesInDir();
+        $this->getAllFilesInDir();   
+    }
+    
+    public function getAlbumUsingGET($value) {
+        if ($value == 'jahr') {
+            if (isset($_GET[$value])) {
+                return $_GET[$value];
+            }                
+        }
+        return "2013";
     }
     
     /**
@@ -52,6 +67,14 @@ class AlbumManager {
                 break;
         }
         return $result;
+    }
+    
+    public function paginationBuilder($limit, $value) {
+        $page = 1;
+        if (isset($_GET[$value])) {
+            $page = $_GET[$value];
+        }
+        $this->_paginationClass->paginationProvider($this, $this->_allImages, $page, $limit);
     }
     
     /**

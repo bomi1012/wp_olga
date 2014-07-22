@@ -12,6 +12,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Abadi MT Condensed Light';
+  src: url('../font/Abadi MT Condensed Light.ttf');
+  font-weight: 100;
+  font-style: normal;
+}
+
 itckrist
 
 /* Getting the new tags to behave */

@@ -1,13 +1,10 @@
 <?php
 $root = "album";
 $sep = "/";
-if (isset($_GET['jahr'])) {
-    $albumTitle = $_GET['jahr'];
-} else {
-    $albumTitle = "2013";
-}
-
-$album = new AlbumManager(Constans::ALBUM_PATCH, $root . $sep . $albumTitle);
+$album = new AlbumManager();
+$albumTitle = $album->getAlbumUsingGET('jahr');
+$album->albumInit(Constans::ALBUM_PATCH, $root . $sep . $albumTitle);
+//$album->paginationBuilder(12, 'page');
 ?>
 <h1> <?php echo $album->getTitle($albumTitle); ?> </h1>
 <div class="article_text span8">  
