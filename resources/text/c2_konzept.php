@@ -1,6 +1,7 @@
 <?php
-$album = new AlbumManager(Constans::ALBUM_PATCH, 'konzept');
-$album->randomImages(2);
+//$album = new AlbumManager();
+//$album->albumInit(Constans::ALBUM_PATCH, 'konzept');
+//$album->randomImages(2);
 ?>
 
 <div class="article_text">
@@ -17,6 +18,28 @@ $album->randomImages(2);
                     alt="Photo"></a>
             <?php //} ?>
     </div>-->
+
+<!-- vorwort -->
+    <div class="photos_konzept photo_konzept_vorwort">
+        <a 
+            class="fancybox" 
+            rel="group" 
+            href="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_vorwort_01_big.jpg">
+            <img 
+                class="curved" 
+                src="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_vorwort_01_min.jpg" 
+                alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
+        </a>
+        <a 
+            class="fancybox" 
+            rel="group" 
+            href="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_vorwort_02_big.jpg">
+            <img 
+                class="curved" 
+                src="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_vorwort_02_min.jpg" 
+                alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
+        </a>
+    </div>
 
 <!-- rahmenbedingungen -->
     <div class="photos_konzept photo_konzept_rahmenbedingungen" style="display: none">
@@ -128,6 +151,15 @@ $album->randomImages(2);
                 src="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_tag_01_min.jpg" 
                 alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
         </a>
+         <a 
+            class="fancybox" 
+            rel="group" 
+            href="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_tag_02_big.jpg">
+            <img 
+                class="curved" 
+                src="<?php echo Constans::ALBUM_PATCH ?>konzept/konzept_tag_02_min.jpg" 
+                alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
+        </a>
     </div>
 
 <!-- Spiele -->
@@ -215,6 +247,7 @@ $album->randomImages(2);
         
         //photo
         $('.photos_konzept').hide();        
+        $('.photo_konzept_vorwort').show();  
     });
     // Bei Click auf "meine erfahrung"
     $('#konzept_vorwort').bind("click", {
@@ -255,6 +288,7 @@ $album->randomImages(2);
         if (event.data.click == vorwortDiv) {
             if (unclicable != vorwortDiv) {
                 $('.photos_konzept').hide();
+                $('.photo_konzept_vorwort').show();
                 Bearbeitung(vorwort, vorwortDiv, "konzept");
             }
         } else if (event.data.click == rahmenbedingungenDiv) {
