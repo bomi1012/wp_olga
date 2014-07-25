@@ -6,6 +6,9 @@
 class AlbumManager {
     
     private $_paginationClass;
+    public function getPagination() {
+        return $this->_paginationClass;
+    }
     
     private $_album;     
     /**  @see AlbumEntity */
@@ -24,12 +27,14 @@ class AlbumManager {
      * @param String $folder
      */
     public function __construct() {
-        $this->_paginationClass = new Pagination();
+        
     }
     
     public function albumInit($path, $folder) {
         $this->_album = new AlbumEntity($path, $folder); 
         $this->getAllFilesInDir();   
+        
+         $this->_paginationClass = new Pagination();      
     }
     
     public function getAlbumUsingGET($value) {
@@ -69,12 +74,19 @@ class AlbumManager {
         return $result;
     }
     
-    public function paginationBuilder($limit, $value) {
+    public function paginationBuilder($limit) {
+        $kern = array($limit, count($this->_allImages), $this->getCurrentPage());
+        $additional = array($this->getAlbumUsingGET('jahr'));        
+        $this->_paginationClass->paginationSaver($kern, $additional);        
+        return $this->_paginationClass->paginationProvider($this);
+    }
+    
+    public function getCurrentPage() {
         $page = 1;
-        if (isset($_GET[$value])) {
-            $page = $_GET[$value];
+        if (isset($_GET['page'])) {
+            $page = $_GET['page'];
         }
-        $this->_paginationClass->paginationProvider($this, $this->_allImages, $page, $limit);
+        return $page;
     }
     
     /**
@@ -122,7 +134,15 @@ class AlbumManager {
         return strpos($content, $str) ? true : false;
     }
     
-    
+    /**
+     * @return boolean wenn ja, dann ja!
+     */
+    public function isShow($nummer, $limit, $page) {
+        if($nummer <= $limit * $page && $nummer >= ($page - 1) * $limit + 1) {
+            return TRUE;
+        }
+        return FALSE;
+    }
 }
 
 ?>
