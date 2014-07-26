@@ -464,3 +464,23 @@ margin-bottom: -10px;
 blockquote.abstand {
     margin: 20px 0 40px -20px;
 }
+
+h1.title {
+    font-family: 'Abadi MT Condensed Light';
+    text-transform: uppercase;
+    width: 100%;
+    margin-bottom: 30px;
+    color: #B22431;
+    font-weight: 100;
+    margin-top: -20px;
+    font-size: xx-large;
+}
+
+h2.title {
+    font-family: 'Abadi MT Condensed Light';
+    text-transform: uppercase;
+    color: #CBA256;
+    font-weight: 100;
+    margin-top: 0px;
+    font-size: 20px;
+}

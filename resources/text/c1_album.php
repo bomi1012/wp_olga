@@ -8,8 +8,8 @@ $album->albumInit(Constans::ALBUM_PATCH, $root . $sep . $albumTitle);
 //$pagination = ;
 
 ?>
-<h1> <?php echo $album->getTitle($albumTitle); ?> </h1>
 <div class="article_text span8">  
+    <h1 class="title"> <?php echo $album->getTitle($albumTitle); ?> </h1>
     <?php
     $nummer = 1;
     foreach ($album->getAllImages() as $min => $big) {        
