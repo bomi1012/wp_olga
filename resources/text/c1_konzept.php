@@ -1,5 +1,6 @@
 <?php $p = "<p>"; ?>
 <div class="article_text c1" id="text_vorwort">
+     <h1 class="title"> <?php echo $model->umlaute(Constans::KW_VORWORT); ?> </h1>
     <?php
     echo $p;
     echo $model->FirstLetter("Dieses Konzept ist eine Dokumentation unserer Arbeit und wurde von uns persönlich erstellt. 
@@ -11,6 +12,7 @@
 </div>
 
 <div class="article_text c1" id="text_rahmenbedingungen">
+    <h1 class="title"> <?php echo $model->umlaute(Constans::KW_RAHMENBEDINGUNGEN); ?> </h1>
     <?php
     echo $p;
     echo $model->FirstLetter("Die Betreuung unserer Tageskinder findet in einer Doppelhaushälfte, 
@@ -53,6 +55,7 @@
 </div>
 
 <div class="article_text c1" id="text_auf_zu">
+     <h1 class="title"> <?php echo $model->umlaute(Constans::KW_AUF_ZU); ?> </h1>
     <?php
     echo $p;
     echo $model->FirstLetter("Wir bieten Ihnen verschiedene, ganz individuell auf Ihre Bedürfnisse abgestimmte, 
@@ -68,6 +71,7 @@
 </div>
 
 <div class="article_text c1" id="text_ziele">    
+    <h1 class="title"> <?php echo $model->umlaute(Constans::KW_ZIELE); ?> </h1>
     <?php
     echo $p;
     echo $model->FirstLetter("Unser größtes Ziel ist es, dass sich die Kinder bei uns und unserer Familie wohlfühlen, 
@@ -94,6 +98,7 @@
     ?>
 </div>
 <div class="article_text c1" id="text_schwerpunkte">
+    <h1 class="title"> <?php echo $model->umlaute(Constans::KW_SCHWERPUNKTE); ?> </h1>
     <?php
     echo $p;
     echo $model->FirstLetter("Die Pflege Ihres Kindes ist nur ein Schwerpunkt unserer pädagogischen Arbeit. 
@@ -163,6 +168,7 @@
 </div>
 
 <div class="article_text c1" id="text_eingewoehnung">
+    <h1 class="title"> <?php echo $model->umlaute(Constans::KW_EINGEWOEHNUNG); ?> </h1>
     <?php
     echo $p;
     echo $model->FirstLetter("Zum ersten Mal bewegt sich Ihr Kind in einer völlig fremden Umgebung und statt der gewohnten 
@@ -184,6 +190,7 @@
 </div>
 
 <div class="article_text c1" id="text_spiele">
+    <h1 class="title"> <?php echo $model->umlaute(Constans::KW_SPIELE); ?> </h1>
     <?php
     echo $p;
     echo $model->FirstLetter("Das Spiel ist die Haupttätigkeit im Vorschulalter und somit eine der wichtigsten 
@@ -217,6 +224,7 @@
 </div>
 
 <div class="article_text c1" id="text_tag">  
+    <h1 class="title"> <?php echo $model->umlaute(Constans::KW_TAG_MITTAGESSEN); ?> </h1>
     <?php
     echo $p;
     echo $model->FirstLetter("Der Tagesablauf ist nicht als fester Stundenplan anzusehen. 
@@ -271,6 +279,7 @@
 </div>
 
 <div class="article_text c1" id="text_eltern">
+    <h1 class="title"> <?php echo $model->umlaute(Constans::KW_ARBEIT_MIT_ELTERN); ?> </h1>
     <?php
     echo $p;
     echo $model->FirstLetter("Der aktive Austausch mit Ihnen, den Eltern, ist in der Kinderbetreuung sehr wichtig. 
@@ -283,6 +292,7 @@
 </div>
 
 <div class="article_text c1" id="text_institut">
+    <h1 class="title"> <?php echo $model->umlaute(Constans::KW_ARBEIT_MIT_INSTITUT); ?> </h1>
     <?php
     echo $p;
     echo $model->FirstLetter("Wir arbeiten aktiv mit dem Jugendamt und anderen Tagespflegepersonen zusammen und besuchen 
@@ -293,6 +303,7 @@
 </div>
 
 <div class="article_text c1" id="text_bezahlung">
+    <h1 class="title"> <?php echo $model->umlaute(Constans::KW_BEZAHLUNG); ?> </h1>
     <?php
     echo $p;
     echo $model->FirstLetter("Das Jugendamt übernimmt einen Teil der Betreuungskosten, einen weiteren Teil der Kosten 

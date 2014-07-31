@@ -27,6 +27,20 @@ $album->albumInit(Constans::ALBUM_PATCH, $root . $sep . $albumTitle);
             </a>
         </div>
         <?php
+        } else { ?>
+    <div style="display: none; ">
+            <a 
+                class="fancybox" 
+                rel="group" 
+                href="<?php echo $album->getAlbum()->getDir() ?>/<?php echo $big ?>">
+                <img 
+                    class="img-circle" 
+                    style="width: 150px;" 
+                    src="<?php echo $album->getAlbum()->getDir() ?>/<?php echo $min ?>" 
+                    alt="Photo">
+            </a>
+        </div>
+        <?php
         }
         $nummer = $nummer + 1;
     }

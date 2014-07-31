@@ -184,7 +184,7 @@
         </a>
     </div>
 
-    <h2 ><?php echo Constans::CONCEPT ?>:</h2>
+    <h2 class="title"><?php echo Constans::CONCEPT ?></h2>
     <p>
         <img class="icon" src="<?php echo Constans::ICON_PATCH ?>check.png" alt="check" style="width: 16px;">
         <span id="konzept_vorwort" class="navi"><?php echo Constans::KW_VORWORT ?></span>
