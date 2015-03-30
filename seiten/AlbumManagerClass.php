@@ -70,6 +70,9 @@ class AlbumManager {
             case "2014":
                 $result = "Bilder aus dem Jahr 2014";
                 break;
+            case "2015":
+                $result = "Bilder aus dem Jahr 2015";
+                break;
         }
         return $result;
     }
