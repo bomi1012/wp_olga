@@ -4,12 +4,12 @@
     
     
         <div id="photo_all">
-             <a title="ich bin Hermann Böhm" class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_3b.jpg">
+            <a title="<?php echo $model->Umlaute("ich bin Hermann Böhm"); ?>" class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_3b.jpg">
             <img class="curved" src="<?php echo Constans::IMAGE_PATCH ?>tm_photo_3a.jpg" alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>"></a>
 
             
         <a 
-            title="Ich bin Olga Böhm" 
+            title="<?php echo $model->Umlaute("ich bin Olga Böhm"); ?>" 
             class="fancybox" 
             rel="group" 
             href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_1b.jpg">
@@ -23,7 +23,7 @@
    
     <div id="photo_olga">
         <a 
-            title="Ich bin Olga Böhm" 
+            title="<?php echo $model->Umlaute("ich bin Olga Böhm"); ?>" 
             class="fancybox" 
             rel="group" 
             href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_1b.jpg">
@@ -38,7 +38,7 @@
     </div>
 
     <div id="photo_hermann">
-        <a title="ich bin Hermann Böhm" class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_3b.jpg">
+        <a title="<?php echo $model->Umlaute("ich bin Hermann Böhm"); ?>" class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_3b.jpg">
             <img class="curved" src="<?php echo Constans::IMAGE_PATCH ?>tm_photo_3a.jpg" alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>"></a>
 
         <a title="Ich und meine Kinder (Gabriel und Evelin)" class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_4b.jpg">
