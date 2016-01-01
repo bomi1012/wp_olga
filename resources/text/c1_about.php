@@ -137,7 +137,7 @@
     </div>
     <div class="rows">
         <div class="table_left">
-            <p>2006, 2009, 2011</p>
+            <p>2006, 2009, 2011, 2015</p>
         </div>
         <div class="table_rigth">
             <p>&laquo;Erste-Hilfe-Kurs&raquo; am Kind</p>        
@@ -149,6 +149,22 @@
 <div class="article_text c1" id="text_erfahrung_hermann">
     <div class="rows">
         <div class="table_left">
+            <p>2015</p>
+        </div>
+        <div class="table_rigth">
+            <p><?php echo $model->Umlaute("Fortbildung &laquo;Singen und Spielen in der Kindertagespflege&raquo;"); ?></p>        
+        </div>
+    </div>
+    <div class="rows">
+        <div class="table_left">
+            <p>2013</p>
+        </div>
+        <div class="table_rigth">
+            <p><?php echo $model->Umlaute("Fortbildung &laquo;Lebensmittelhygiene in der Kindertagespflege&raquo;"); ?></p>        
+        </div>
+    </div>
+    <div class="rows">
+        <div class="table_left">
             <p>2012</p>
         </div>
         <div class="table_rigth">
@@ -157,7 +173,7 @@
     </div>
     <div class="rows">
         <div class="table_left">
-            <p>November 2012</p>
+            <p>2012, 2015</p>
         </div>
         <div class="table_rigth">
             <p>&laquo;Erste-Hilfe-Kurs&raquo; am Kind</p>        

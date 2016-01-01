@@ -83,7 +83,9 @@
         <img class="icon" src="<?php echo Constans::ICON_PATCH ?>pdf.png" alt="check" style="width: 16px;">
         <a href="<?php echo Constans::PDF_PATCH ?>hermann/erste_hilfe_kurs.pdf" target="_blank">Erste-Hilfe am Kind</a><br> 
         <img class="icon" src="<?php echo Constans::ICON_PATCH ?>pdf.png" alt="check" style="width: 16px;">
-        <a href="<?php echo Constans::PDF_PATCH ?>hermann/lebensmittelhygiene.pdf" target="_blank">Lebensmittelhygiene</a><br>
+        <a href="<?php echo Constans::PDF_PATCH ?>hermann/lebensmittelhygiene.pdf" target="_blank">Fortbildung: Lebensmittelhygiene</a><br>
+        <img class="icon" src="<?php echo Constans::ICON_PATCH ?>pdf.png" alt="check" style="width: 16px;">
+        <a href="<?php echo Constans::PDF_PATCH ?>hermann/lebensmittelhygiene.pdf" target="_blank">Fortbildung: Singen und Spielen</a><br>
     </p>
     <!--http://www.plugolabs.com/twitter-bootstrap-button-generator/--> 
 </div>

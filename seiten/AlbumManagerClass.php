@@ -62,19 +62,7 @@ class AlbumManager {
     }
     
     public function getTitle($title) {
-        $result = "unbekannt";
-        switch ($title) {
-            case "2013":
-                $result = "Bilder aus dem Jahr 2013";
-                break;
-            case "2014":
-                $result = "Bilder aus dem Jahr 2014";
-                break;
-            case "2015":
-                $result = "Bilder aus dem Jahr 2015";
-                break;
-        }
-        return $result;
+        return "Bilder aus dem Jahr " . $title;
     }
     
     public function paginationBuilder($limit) {
