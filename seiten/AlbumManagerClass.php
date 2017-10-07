@@ -43,7 +43,7 @@ class AlbumManager {
                 return $_GET[$value];
             }                
         }
-        return "2013";
+        return "2017";
     }
     
     /**

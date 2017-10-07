@@ -63,7 +63,7 @@ Ersetzen Sie das Zeichen ß durch die Zeichenfolge &szlig;
     const ROLE = "role";
     const DT = "Datetime";
     const MY_EMAIL = "kb_rotkaeppchen@freenet.de";
-    const MY_HANDY = "+4915156914244";
+    const MY_HANDY = "017647185375";
     const MY_TELEFON = "06341 930843";
     const MY_ADDRESS_1 = "Willy-Brandt-Str. 40";
     const MY_ADDRESS_2 = "76829 Landau";

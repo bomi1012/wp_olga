@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set("Europe/Berlin");
 (substr(date('d'), 0, 1) == 0) 
         ? $zahl_von_date = substr(date('d'), 1, 1) 
         : $zahl_von_date = substr(date('d'), 0, 1);

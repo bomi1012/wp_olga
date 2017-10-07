@@ -3,46 +3,36 @@
     <!-- http://fancyapps.com/fancybox/ -->
     
     
-        <div id="photo_all">
-            <a title="<?php echo $model->Umlaute("ich bin Hermann Böhm"); ?>" class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_3b.jpg">
-            <img class="curved" src="<?php echo Constans::IMAGE_PATCH ?>tm_photo_3a.jpg" alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>"></a>
-
-            
-        <a 
-            title="<?php echo $model->Umlaute("ich bin Olga Böhm"); ?>" 
-            class="fancybox" 
-            rel="group" 
-            href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_1b.jpg">
-            <img 
-                class="curved" 
-                src="<?php echo Constans::IMAGE_PATCH ?>tm_photo_1a.jpg" 
-                alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
+    <div id="photo_all">
+        <a title="<?php echo $model->Umlaute("Hermann und Olga Böhm mit Kindern"); ?>" class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>boehms.jpg">
+            <img class="curved" style="height: 170px" src="<?php echo Constans::IMAGE_PATCH ?>boehms.jpg" alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
         </a>
-
-           </div>
+    </div>
    
     <div id="photo_olga">
         <a 
             title="<?php echo $model->Umlaute("ich bin Olga Böhm"); ?>" 
             class="fancybox" 
             rel="group" 
-            href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_1b.jpg">
+            href="<?php echo Constans::IMAGE_PATCH ?>img-olga.jpg">
             <img 
-                class="curved" 
-                src="<?php echo Constans::IMAGE_PATCH ?>tm_photo_1a.jpg" 
+                class="curved"                 
+                style="height: 250px; display: block; margin-left: auto; margin-right: auto;"
+                src="<?php echo Constans::IMAGE_PATCH ?>img-olga.jpg" 
                 alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>">
         </a>
 
-        <a title="Ich und meine Kinder (Gabriel und Evelin)" class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_2b.jpg">
-            <img class="curved" src="<?php echo Constans::IMAGE_PATCH ?>tm_photo_2a.jpg" alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>"></a>
+        <!-- a title="Ich und meine Kinder (Gabriel und Evelin)" class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_2b.jpg">
+            <img class="curved" src="<?php echo Constans::IMAGE_PATCH ?>tm_photo_2a.jpg" alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>"></a -->
     </div>
 
     <div id="photo_hermann">
         <a title="<?php echo $model->Umlaute("ich bin Hermann Böhm"); ?>" class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_3b.jpg">
-            <img class="curved" src="<?php echo Constans::IMAGE_PATCH ?>tm_photo_3a.jpg" alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>"></a>
+            <img class="curved" style="height: 250px; display: block; margin-left: auto; margin-right: auto;"
+                 src="<?php echo Constans::IMAGE_PATCH ?>img-hermann.jpg" alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>"></a>
 
-        <a title="Ich und meine Kinder (Gabriel und Evelin)" class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_4b.jpg">
-            <img class="curved" src="<?php echo Constans::IMAGE_PATCH ?>tm_photo_4a.jpg" alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>"></a>
+        <!-- a title="Ich und meine Kinder (Gabriel und Evelin)" class="fancybox" rel="group" href="<?php echo Constans::IMAGE_PATCH ?>tm_photo_4b.jpg">
+            <img class="curved" src="<?php echo Constans::IMAGE_PATCH ?>tm_photo_4a.jpg" alt="<?php echo Constans::KW_ROTKAEPPCHEN ?>"></a -->
 
     </div>
 
@@ -85,7 +75,7 @@
         <img class="icon" src="<?php echo Constans::ICON_PATCH ?>pdf.png" alt="check" style="width: 16px;">
         <a href="<?php echo Constans::PDF_PATCH ?>hermann/lebensmittelhygiene.pdf" target="_blank">Fortbildung: Lebensmittelhygiene</a><br>
         <img class="icon" src="<?php echo Constans::ICON_PATCH ?>pdf.png" alt="check" style="width: 16px;">
-        <a href="<?php echo Constans::PDF_PATCH ?>hermann/lebensmittelhygiene.pdf" target="_blank">Fortbildung: Singen und Spielen</a><br>
+        <a href="<?php echo Constans::PDF_PATCH ?>hermann/fortbildung.pdf" target="_blank">Fortbildung: Singen und Spielen</a><br>
     </p>
     <!--http://www.plugolabs.com/twitter-bootstrap-button-generator/--> 
 </div>

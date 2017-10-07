@@ -14,9 +14,9 @@ class Connection {
     }
 
     private $_link;
-    private $_host = "localhost";
+    private $_host = "localhost:3306";
     private $_user = "web241";
-    private $_passwort = "root";
+    private $_passwort = "OlgaWeb2011!";
     private $_db = "usr_web241_1";
 
     public function __construct() {
@@ -25,7 +25,7 @@ class Connection {
 
     protected function DBOpen() {
         try {
-            $this->_link = mysql_connect($this->_host, $this->_user, $this->_passwort);
+            $this->_link =  mysql_connect($this->_host, $this->_user, $this->_passwort);
             $db = mysql_select_db($this->_db);
             $query = mysql_query("SET NAMES 'utf8' COLLATE 'utf8_general_ci'");
             if ($this->_link == false || $db == false || $query == false)
