@@ -25,6 +25,8 @@ class Connection {
 
     protected function DBOpen() {
         try {
+            //wenn error. PHP7 --> mysqli_connect ; mysqli_select_db($link, $this->_db); etc.
+            
             $this->_link =  mysql_connect($this->_host, $this->_user, $this->_passwort);
             $db = mysql_select_db($this->_db);
             $query = mysql_query("SET NAMES 'utf8' COLLATE 'utf8_general_ci'");

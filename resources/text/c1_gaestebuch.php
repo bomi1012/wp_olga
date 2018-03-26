@@ -35,7 +35,7 @@ if (isset($_POST["submit"])) {
     $gbService->Count();
     $gbService->setMaxPage($gbService->getCount());
     if ($gbService->getCount() != 0) {
-        if ($gbService->getMaxPage() == 1) {
+//        if ($gbService->getMaxPage() == 1) {
             foreach ($gbService->GetAllFromGastBook(0) as $value) {
                 ?>
     <div class="show_1">
@@ -65,9 +65,9 @@ if (isset($_POST["submit"])) {
                 <?php
             }
         }
-    } else {
-        //TODO: keine 
-    }
+//    } else {
+//        //TODO: keine 
+//    }
     ?>
 </div>
 

@@ -55,6 +55,8 @@
         <a href="<?php echo Constans::PDF_PATCH ?>olga/erlaubnis_zur_kindertagespflege.pdf" target="_blank">Erlaubnis zur Kinderpflege</a><br>
         <img class="icon" src="<?php echo Constans::ICON_PATCH ?>pdf.png" alt="check" style="width: 16px;">
         <a href="<?php echo Constans::PDF_PATCH ?>olga/erste_hilfe_kurs.pdf" target="_blank">Erste-Hilfe am Kind</a><br> 
+        <img class="icon" src="<?php echo Constans::ICON_PATCH ?>pdf.png" alt="check" style="width: 16px;">
+        <a href="<?php echo Constans::PDF_PATCH ?>olga/lebensmittelhygiene.pdf" target="_blank">Fortbildung: Lebensmittelhygiene</a><br> 
     </p>
 
     <h2><?php echo $model->Umlaute("Hermann Böhm") ?></h2>

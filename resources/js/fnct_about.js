@@ -45,8 +45,7 @@ function reply(clicked_id) {
         Bearbeitung(allgemein, allgemeinHermann, "about", "Olga"); 
     }
 }
-    
-    
+  
 function about(event){  
     if(event.data.click == erfahrungOlga){   
         if(unclicable != erfahrungOlga){                
